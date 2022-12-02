@@ -4,6 +4,7 @@
 import { useState, useContext } from 'react';
 
 import ThemeButton from '../CustomButtons/ThemeButton';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -13,26 +14,26 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+import MenuIcon from '@mui/icons-material/Menu';
 
-import { CONSTANT_DATA } from "../../utils/constant";
+import { CONTENT_PROPERTIES } from "../../utils/constant";
 import { THEME } from "../../utils/theme";
 import { ThemeContext, ThemeContextType } from '../../context/theme';
 import { getThemeFromContext } from '../../utils/helper/theme';
 
-import './Navbar.module.css';
+import { redirectTo } from '../../utils/helper/url';
 
 const drawerWidth = 240;
 
-const navItems = () => {
-  return Object.values(CONSTANT_DATA.NAVBAR_ITEMS).map(
+const navItems = (color: string) => {
+  return Object.values(CONTENT_PROPERTIES.NAVBAR_ITEMS).map(
     (item) => (
       <ListItem key={item.id} disablePadding>
-        <ListItemButton sx={{ textAlign: 'center' }}>
+        <ListItemButton sx={{ textAlign: 'center', color: color}}>
           <ListItemText primary={item.name} />
         </ListItemButton>
       </ListItem>
@@ -42,7 +43,7 @@ const navItems = () => {
 
 const Navbar = () => {
 
-  const {currentTheme, setTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
+  const {currentTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -50,14 +51,14 @@ const Navbar = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2, color: CONSTANT_DATA.LOGO_NAME.color }}>
-        { CONSTANT_DATA.LOGO_NAME.name }
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight: '100vh' }}>
+      <Typography variant="h6" sx={{ my: 2, color: CONTENT_PROPERTIES.LOGO_NAME.color, cursor: 'pointer' }}>
+        { CONTENT_PROPERTIES.LOGO_NAME.name }
       </Typography>
       <Divider />
-      <List>
+      <List sx={{}}>
         {
-          navItems()
+          navItems(THEME[currentTheme].NAVBAR_TEXT)
         }
       </List>
     </Box>
@@ -68,13 +69,13 @@ const Navbar = () => {
       <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND }} >
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="start"
+            size="medium"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, color: THEME[currentTheme].NAVBAR_TEXT }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </IconButton>
           <Typography
             variant="h4"
@@ -91,17 +92,18 @@ const Navbar = () => {
                   md: '1.825rem',
                   lg: '1.925rem',
                 },
-                color: CONSTANT_DATA.LOGO_NAME.color
+                color: CONTENT_PROPERTIES.LOGO_NAME.color,
+                cursor: 'pointer'
               }
             }
           >
-            {CONSTANT_DATA.LOGO_NAME.name}
+            {CONTENT_PROPERTIES.LOGO_NAME.name}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {
-              Object.values(CONSTANT_DATA.NAVBAR_ITEMS).map(
+              Object.values(CONTENT_PROPERTIES.NAVBAR_ITEMS).map(
                 (item) => (
-                    <Button key={item.id} className='navbar-buttons' sx={
+                    <Button key={item.id} className='navbar-buttons' onClick={() => {redirectTo(item.redirect)}} sx={
                         { 
                           color: THEME[currentTheme].NAVBAR_TEXT,
                           marginLeft: {
@@ -131,7 +133,7 @@ const Navbar = () => {
                 )
               )
             }
-          <ThemeButton></ThemeButton>
+          <ThemeButton isFloating={false} />
           </Box>
         </Toolbar>
       </AppBar>

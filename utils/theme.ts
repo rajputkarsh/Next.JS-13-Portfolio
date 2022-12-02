@@ -1,4 +1,5 @@
 import { Theme, Time } from "../types/common";
+import { SETTINGS } from "./constant";
 
 export const THEME = {
     LIGHT: {
@@ -13,8 +14,6 @@ export const THEME = {
 
 export const getTheme = () => {
     const currentTime: Time = new Date().getHours();
-    let currentTheme: Theme;
-    // let currentTheme: Theme = localStorage.getItem("theme");
-    return "LIGHT" as Theme;
-    // return currentTheme ? (currentTheme) : ((currentTime > 18 || currentTime < 5) ? "DARK" : "LIGHT");
+    let currentTheme: string | null = localStorage.getItem("theme");
+    return (currentTheme ? (currentTheme) : ((currentTime > 18 || currentTime < 5) ? "DARK" : "LIGHT")) as Theme;
 }
