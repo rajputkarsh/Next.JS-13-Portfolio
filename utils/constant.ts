@@ -1,3 +1,4 @@
+import { Theme } from "../types/common";
 
 export const BASE_URL = 'https://utkarshrajput.com/';
 export const BASE_URL_WITHOUT_PROTOCOL = 'utkarshrajput.com/';
@@ -55,9 +56,12 @@ export const CONSTANT_DATA  = {
     }
 };
 
+const LIGHT: Theme = 'LIGHT';
+const DARK: Theme  = 'DARK';
+
 export const SETTINGS = {
     AVAILABLE_THEMES: {
-        LIGHT: 'LIGHT',
-        DARK: 'DARK',
+        LIGHT,
+        DARK,
     }
 };

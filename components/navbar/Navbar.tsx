@@ -1,10 +1,9 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
-import Link from 'next/link';
-
+import ThemeButton from '../CustomButtons/ThemeButton';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -19,11 +18,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+
 import { CONSTANT_DATA } from "../../utils/constant";
-import { getTheme, THEME } from "../../utils/theme";
+import { THEME } from "../../utils/theme";
+import { ThemeContext, ThemeContextType } from '../../context/theme';
+import { getThemeFromContext } from '../../utils/helper/theme';
 
 import './Navbar.module.css';
-import { Theme } from '../../types/common';
 
 const drawerWidth = 240;
 
@@ -41,8 +42,7 @@ const navItems = () => {
 
 const Navbar = () => {
 
-  const currentTheme: Theme = getTheme();
-
+  const {currentTheme, setTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -131,6 +131,7 @@ const Navbar = () => {
                 )
               )
             }
+          <ThemeButton></ThemeButton>
           </Box>
         </Toolbar>
       </AppBar>
