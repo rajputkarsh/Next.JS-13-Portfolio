@@ -20,12 +20,14 @@ import Button from '@mui/material/Button';
 
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { CONTENT_PROPERTIES } from "../../utils/constant";
+import { BASE_URL, CONTENT_PROPERTIES } from "../../utils/constant";
 import { THEME } from "../../utils/theme";
 import { ThemeContext, ThemeContextType } from '../../context/theme';
 import { getThemeFromContext } from '../../utils/helper/theme';
 
 import { redirectTo } from '../../utils/helper/url';
+
+import './Navbar.module.css';
 
 const drawerWidth = 240;
 
@@ -52,9 +54,6 @@ const Navbar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight: '100vh' }}>
-      <Typography variant="h6" sx={{ my: 2, color: CONTENT_PROPERTIES.LOGO_NAME.color, cursor: 'pointer' }}>
-        { CONTENT_PROPERTIES.LOGO_NAME.name }
-      </Typography>
       <Divider />
       <List sx={{}}>
         {
@@ -65,9 +64,29 @@ const Navbar = () => {
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND }} >
+    <Box sx={{ display: 'flex', minHeight:'80px !important' }}>
+      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight:'80px !important', justifyContent: 'center' }} >
         <Toolbar>
+          <Typography
+            variant="h4"
+            onClick={() => {redirectTo(BASE_URL)}}
+            component="div"
+            sx={
+              { 
+                flexGrow: 1,
+                fontFamily: 'Rock Salt', 
+                fontSize: {
+                  sm: '1.325rem',
+                  md: '1.825rem',
+                  lg: '2.325rem',
+                },
+                color: CONTENT_PROPERTIES.LOGO_NAME.color,
+                cursor: 'pointer'
+              }
+            }
+          >
+            {CONTENT_PROPERTIES.LOGO_NAME.name}
+          </Typography>
           <IconButton
             aria-label="open drawer"
             edge="start"
@@ -77,28 +96,6 @@ const Navbar = () => {
           >
             <MenuIcon fontSize="large" />
           </IconButton>
-          <Typography
-            variant="h4"
-            component="div"
-            sx={
-              { 
-                flexGrow: 1, 
-                display: { 
-                  xs: 'none', 
-                  sm: 'block' 
-                }, 
-                fontSize: {
-                  sm: '1.225rem',
-                  md: '1.825rem',
-                  lg: '1.925rem',
-                },
-                color: CONTENT_PROPERTIES.LOGO_NAME.color,
-                cursor: 'pointer'
-              }
-            }
-          >
-            {CONTENT_PROPERTIES.LOGO_NAME.name}
-          </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {
               Object.values(CONTENT_PROPERTIES.NAVBAR_ITEMS).map(
@@ -122,9 +119,9 @@ const Navbar = () => {
                             color: "#FFF",
                           },
                           fontSize: {
-                            xs: '0.575rem',
-                            sm: '0.675rem',
-                            md: '0.875rem', 
+                            xs: '0.675rem',
+                            sm: '0.875rem',
+                            md: '1.075rem', 
                           }
                         }
                       }>
@@ -139,6 +136,7 @@ const Navbar = () => {
       </AppBar>
       <Box component="nav">
         <Drawer
+          anchor="right"
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}

@@ -1,4 +1,6 @@
 
-export default async function Page() {
-    return <div></div>
+"use client";
+
+export default function Page() {
+    return <div>this is the main page</div>
 }

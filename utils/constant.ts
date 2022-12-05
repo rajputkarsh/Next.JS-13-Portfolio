@@ -1,8 +1,12 @@
 import { Theme } from "../types/common";
 
-export const URL_PROTOCOL              = 'https://';
-export const BASE_URL                  = 'https://utkarshrajput.com/';
-export const BASE_URL_WITHOUT_PROTOCOL = 'utkarshrajput.com/';
+// export const URL_PROTOCOL              = 'https://';
+// export const BASE_URL                  = 'https://utkarshrajput.com/';
+// export const BASE_URL_WITHOUT_PROTOCOL = 'utkarshrajput.com/';
+
+export const URL_PROTOCOL              = 'http://';
+export const BASE_URL                  = 'http://localhost:3000/';
+export const BASE_URL_WITHOUT_PROTOCOL = 'localhost:3000/';
 
 export const CONTENT_PROPERTIES  = {
     

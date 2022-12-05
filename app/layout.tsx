@@ -18,6 +18,7 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
                         <header>
                             <Navbar />                    
                         </header>
+                        <div></div>
                         {children}
                         <ThemeButton isFloating={true} />
                     </body>
