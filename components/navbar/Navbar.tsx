@@ -4,6 +4,7 @@
 import { useState, useContext } from 'react';
 
 import ThemeButton from '../CustomButtons/ThemeButton';
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -13,26 +14,28 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
+import MenuIcon from '@mui/icons-material/Menu';
 
-import { CONSTANT_DATA } from "../../utils/constant";
+import { BASE_URL, CONTENT_PROPERTIES } from "../../utils/constant";
 import { THEME } from "../../utils/theme";
 import { ThemeContext, ThemeContextType } from '../../context/theme';
 import { getThemeFromContext } from '../../utils/helper/theme';
+
+import { redirectTo } from '../../utils/helper/url';
 
 import './Navbar.module.css';
 
 const drawerWidth = 240;
 
-const navItems = () => {
-  return Object.values(CONSTANT_DATA.NAVBAR_ITEMS).map(
+const navItems = (color: string) => {
+  return Object.values(CONTENT_PROPERTIES.NAVBAR_ITEMS).map(
     (item) => (
       <ListItem key={item.id} disablePadding>
-        <ListItemButton sx={{ textAlign: 'center' }}>
+        <ListItemButton sx={{ textAlign: 'center', color: color}}>
           <ListItemText primary={item.name} />
         </ListItemButton>
       </ListItem>
@@ -42,7 +45,7 @@ const navItems = () => {
 
 const Navbar = () => {
 
-  const {currentTheme, setTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
+  const {currentTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -50,58 +53,54 @@ const Navbar = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2, color: CONSTANT_DATA.LOGO_NAME.color }}>
-        { CONSTANT_DATA.LOGO_NAME.name }
-      </Typography>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight: '100vh' }}>
       <Divider />
-      <List>
+      <List sx={{}}>
         {
-          navItems()
+          navItems(THEME[currentTheme].NAVBAR_TEXT)
         }
       </List>
     </Box>
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND }} >
+    <Box sx={{ display: 'flex', minHeight:'80px !important' }}>
+      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight:'80px !important', justifyContent: 'center' }} >
         <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
           <Typography
             variant="h4"
+            onClick={() => {redirectTo(BASE_URL)}}
             component="div"
             sx={
               { 
-                flexGrow: 1, 
-                display: { 
-                  xs: 'none', 
-                  sm: 'block' 
-                }, 
+                flexGrow: 1,
+                fontFamily: 'Rock Salt', 
                 fontSize: {
-                  sm: '1.225rem',
+                  sm: '1.325rem',
                   md: '1.825rem',
-                  lg: '1.925rem',
+                  lg: '2.325rem',
                 },
-                color: CONSTANT_DATA.LOGO_NAME.color
+                color: CONTENT_PROPERTIES.LOGO_NAME.color,
+                cursor: 'pointer'
               }
             }
           >
-            {CONSTANT_DATA.LOGO_NAME.name}
+            {CONTENT_PROPERTIES.LOGO_NAME.name}
           </Typography>
+          <IconButton
+            aria-label="open drawer"
+            edge="start"
+            size="medium"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' }, color: THEME[currentTheme].NAVBAR_TEXT }}
+          >
+            <MenuIcon fontSize="large" />
+          </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {
-              Object.values(CONSTANT_DATA.NAVBAR_ITEMS).map(
+              Object.values(CONTENT_PROPERTIES.NAVBAR_ITEMS).map(
                 (item) => (
-                    <Button key={item.id} className='navbar-buttons' sx={
+                    <Button key={item.id} className='navbar-buttons' onClick={() => {redirectTo(item.redirect)}} sx={
                         { 
                           color: THEME[currentTheme].NAVBAR_TEXT,
                           marginLeft: {
@@ -120,9 +119,9 @@ const Navbar = () => {
                             color: "#FFF",
                           },
                           fontSize: {
-                            xs: '0.575rem',
-                            sm: '0.675rem',
-                            md: '0.875rem', 
+                            xs: '0.675rem',
+                            sm: '0.875rem',
+                            md: '1.075rem', 
                           }
                         }
                       }>
@@ -131,12 +130,13 @@ const Navbar = () => {
                 )
               )
             }
-          <ThemeButton></ThemeButton>
+          <ThemeButton isFloating={false} />
           </Box>
         </Toolbar>
       </AppBar>
       <Box component="nav">
         <Drawer
+          anchor="right"
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
