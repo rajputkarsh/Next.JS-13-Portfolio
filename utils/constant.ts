@@ -11,7 +11,7 @@ export const BASE_URL_WITHOUT_PROTOCOL = 'localhost:3000/';
 export const CONTENT_PROPERTIES  = {
     
     LOGO_NAME: {
-        name : '<UTKARSH />',
+        title : '<UTKARSH />',
         color: '#e3405f',
     },
 
@@ -58,6 +58,62 @@ export const CONTENT_PROPERTIES  = {
             hoverColor: '#FFF',
             redirect: 'games/',
         },
+    },
+
+    HOME_PAGE : {
+        TYPEWRITER_TEXT : {
+            preText: "const name = ",
+            title: '"Utkarsh";',
+            color: "#e3405f",
+        },
+        INTRODUCTION_TEXTS : [
+            "Full Stack Developer 👨‍💻",
+            "Tech Enthusiast 🔥",
+            "Always Learning 🎯",
+        ],
+        ABOUT_ME: {
+            TITLE: "I am currently...",
+            TEXT: [
+                "👀 Witnessing world in React.JS and Next.JS",
+                "💭 Dreaming in Node.JS, Express.JS and Nest.JS",
+                "🤔 Saving short term memories in Redis",
+                "💾 Saving Long term memories in MongoDB and SQL",
+                "📡 Streaming everything together using Kafka and RabbitMQ",
+            ]
+        },
+    },
+
+    SOCIAL_MEDIA_ICONS : {
+        LINKEDIN: {
+            title: "LinkedIn",
+            url  : "https://www.linkedin.com/in/utkarsh-rajput/",
+            type : "linkedin",
+            icon : "logos:linkedin-icon"
+        },
+        GITHUB : {
+            title: "Github",
+            url  : "https://github.com/rajputkarsh",
+            type : "github",
+            icon : "logos:github-icon",
+        },
+        TWITTER : {
+            title: "Twitter",
+            url  : "https://twitter.com/thedevperson",
+            type : "twitter",
+            icon : "logos:twitter"
+        },
+        STACKOVERFLOW : {
+            title: "Stack Overflow",
+            url  : "https://stackoverflow.com/users/15149125/utkarsh",
+            type : "stackoverflow",
+            icon : "logos:stackoverflow-icon",
+        },
+    },
+
+    EMAIL : {
+        title: "Email",
+        url  : "r.utkarsh.0010@gmail.com",
+        type : "email",
     }
 };
 

@@ -6,6 +6,7 @@ import useTheme from '../hooks/useTheme';
 import "../styles/globals.css";
 import { ThemeContext } from '../context/theme';
 import ThemeButton from '../components/CustomButtons/ThemeButton';
+import { THEME } from '../utils/theme';
 
 const RootLayout = ({ children } : { children: React.ReactNode }) => {
 
@@ -18,8 +19,9 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
                         <header>
                             <Navbar />                    
                         </header>
-                        <div></div>
-                        {children}
+                        <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 125px)'}}>
+                            { children }
+                        </div>                        
                         <ThemeButton isFloating={true} />
                     </body>
             </ThemeContext.Provider>

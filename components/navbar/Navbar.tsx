@@ -85,7 +85,7 @@ const Navbar = () => {
               }
             }
           >
-            {CONTENT_PROPERTIES.LOGO_NAME.name}
+            {CONTENT_PROPERTIES.LOGO_NAME.title}
           </Typography>
           <IconButton
             aria-label="open drawer"

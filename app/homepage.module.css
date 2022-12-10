@@ -1,0 +1,25 @@
+
+.bold{
+  font-weight: 700 !important;
+}
+
+
+.sectionTitle{
+  text-align: center !important;
+  font-weight: 700 !important;
+  margin-top: 5vh;
+}
+
+.flexTextCenter{
+  justify-content: center !important;
+}
+
+.fullWidth{
+  width: 100% !important
+}
+
+.verticallyHorizontallyCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
