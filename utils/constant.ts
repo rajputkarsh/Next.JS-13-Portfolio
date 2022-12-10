@@ -72,14 +72,20 @@ export const CONTENT_PROPERTIES  = {
             "Always Learning 🎯",
         ],
         ABOUT_ME: {
-            TITLE: "I am currently...",
-            TEXT: [
-                "👀 Witnessing world in React.JS and Next.JS",
-                "💭 Dreaming in Node.JS, Express.JS and Nest.JS",
-                "🤔 Saving short term memories in Redis",
-                "💾 Saving Long term memories in MongoDB and SQL",
-                "📡 Streaming everything together using Kafka and RabbitMQ",
-            ]
+            TITLE: "About Me",
+            CONTENT: {
+                TITLE: "I am currently...",
+                TEXT: [
+                    "👀 Witnessing world in React.JS and Next.JS",
+                    "💭 Dreaming in Node.JS, Express.JS and Nest.JS",
+                    "🤔 Saving short term memories in Redis",
+                    "💾 Saving Long term memories in MongoDB and SQL",
+                    "📡 Streaming everything together using Kafka and RabbitMQ",
+                ],                
+            },
+        },
+        MY_SKILLSET: {
+            TITLE: "My Skillset",
         },
     },
 

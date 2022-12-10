@@ -64,21 +64,23 @@ export default function Page() {
             {/* about me */}
             <Grid item xs={12} className={style.sectionTitle}>
                 <Typography variant="h2" className={style.bold}>
-                    About Me
+                    {
+                        CONTENT_PROPERTIES.HOME_PAGE.ABOUT_ME.TITLE
+                    }
                 </Typography>
             </Grid>
-            <Grid item xs={12} sm={6}>
-                <CodingSkills />
+            <Grid item xs={12} sm={6} className={style.verticallyHorizontallyCenter}>
+                <CodingSkills style={{maxWidth:"80%"}}/>
             </Grid>
             <Grid item xs={12} sm={6}  className={style.verticallyHorizontallyCenter} style={{paddingTop: 0}}>
                 <List>
                     <Typography variant="h4" className={style.bold}>
                         {
-                            CONTENT_PROPERTIES.HOME_PAGE.ABOUT_ME.TITLE
+                            CONTENT_PROPERTIES.HOME_PAGE.ABOUT_ME.CONTENT.TITLE
                         }
                     </Typography>
                     {
-                        CONTENT_PROPERTIES.HOME_PAGE.ABOUT_ME.TEXT.map(
+                        CONTENT_PROPERTIES.HOME_PAGE.ABOUT_ME.CONTENT.TEXT.map(
                             (text, index) => (
                                 <ListItem key={`ABOUT_ME_${index}`}>
                                     <Typography variant="h6" className={style.bold}>
@@ -92,6 +94,17 @@ export default function Page() {
                     }
                 </List>
             </Grid>
+
+
+            {/* skills */}
+            <Grid item xs={12} className={style.sectionTitle}>
+                <Typography variant="h2" className={style.bold}>
+                    {
+                        CONTENT_PROPERTIES.HOME_PAGE.MY_SKILLSET.TITLE
+                    }
+                </Typography>
+            </Grid>
+
         </Grid>
 
     )

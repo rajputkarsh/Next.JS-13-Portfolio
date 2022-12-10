@@ -1,8 +1,8 @@
 
-function CodingSkills() {
+function CodingSkills({style = {}}) {
 	return (
 		<svg 
-      style={{maxWidth:"100%"}}
+      style={style}
 			id="skills_boy"
 			data-name="Layer 1"
 			width="1041.32"
