@@ -63,7 +63,7 @@ export default function Page() {
 
             {/* about me */}
             <Grid item xs={12} className={style.sectionTitle}>
-                <Typography variant="h2" className={style.bold}>
+                <Typography variant="h3" className={style.bold}>
                     {
                         CONTENT_PROPERTIES.HOME_PAGE.ABOUT_ME.TITLE
                     }
@@ -98,7 +98,7 @@ export default function Page() {
 
             {/* skills */}
             <Grid item xs={12} className={style.sectionTitle}>
-                <Typography variant="h2" className={style.bold}>
+                <Typography variant="h3" className={style.bold}>
                     {
                         CONTENT_PROPERTIES.HOME_PAGE.MY_SKILLSET.TITLE
                     }

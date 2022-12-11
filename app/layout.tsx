@@ -7,6 +7,7 @@ import "../styles/globals.css";
 import { ThemeContext } from '../context/theme';
 import ThemeButton from '../components/CustomButtons/ThemeButton';
 import { THEME } from '../utils/theme';
+import Footer from '../components/footer/Footer';
 
 const RootLayout = ({ children } : { children: React.ReactNode }) => {
 
@@ -24,6 +25,9 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
                         </div>                        
                         <ThemeButton isFloating={true} />
                     </body>
+
+                    <Footer />
+
             </ThemeContext.Provider>
         </html>
     );

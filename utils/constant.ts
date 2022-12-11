@@ -9,10 +9,15 @@ export const BASE_URL                  = 'http://localhost:3000/';
 export const BASE_URL_WITHOUT_PROTOCOL = 'localhost:3000/';
 
 export const CONTENT_PROPERTIES  = {
+
+    NAME: {
+        TITLE: "Utkarsh",
+        COLOR: '#e3405f',
+    },
     
     LOGO_NAME: {
-        title : '<UTKARSH />',
-        color: '#e3405f',
+        TITLE : '<UTKARSH />',
+        COLOR: '#e3405f',
     },
 
     NAVBAR_ITEMS : {

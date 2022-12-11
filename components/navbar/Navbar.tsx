@@ -64,8 +64,8 @@ const Navbar = () => {
   );
 
   return (
-    <Box sx={{ display: 'flex', minHeight:'80px !important' }}>
-      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight:'80px !important', justifyContent: 'center' }} >
+    <Box sx={{ display: 'flex', minHeight:'70px !important' }}>
+      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight:'64px !important', justifyContent: 'center' }} >
         <Toolbar>
           <Typography
             variant="h4"
@@ -80,12 +80,12 @@ const Navbar = () => {
                   md: '1.825rem',
                   lg: '2.325rem',
                 },
-                color: CONTENT_PROPERTIES.LOGO_NAME.color,
+                color: CONTENT_PROPERTIES.LOGO_NAME.COLOR,
                 cursor: 'pointer'
               }
             }
           >
-            {CONTENT_PROPERTIES.LOGO_NAME.title}
+            {CONTENT_PROPERTIES.LOGO_NAME.TITLE}
           </Typography>
           <IconButton
             aria-label="open drawer"
