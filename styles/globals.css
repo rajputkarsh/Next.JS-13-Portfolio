@@ -31,6 +31,10 @@
     color: #e3405f !important
   }
 
+  .MuiGrid-item{
+    padding-top: 0 !important;
+  }
+
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;

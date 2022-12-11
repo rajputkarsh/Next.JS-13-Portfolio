@@ -12,7 +12,7 @@ import { CONTENT_PROPERTIES } from "../utils/constant";
 import CodingBoy from "../components/svg/codingBoy/CodingBoy";
 
 import style from './homepage.module.css'
-import CodingSkills from "../components/svg/codingSkills/CodingSkills";
+import ManTeleconference from '../components/svg/manTeleconference/ManTeleconference';
 
 export default function Page() {
 
@@ -25,7 +25,7 @@ export default function Page() {
                 <List>
 
                         <ListItem  className={style.flexTextCenter}>
-                            <Typography variant="h2" className={style.bold}>
+                            <Typography variant="h3" className={style.bold}>
                                 {CONTENT_PROPERTIES.HOME_PAGE.TYPEWRITER_TEXT.preText}
                                 <span style={{color: CONTENT_PROPERTIES.HOME_PAGE.TYPEWRITER_TEXT.color}}>
                                     {
@@ -70,7 +70,7 @@ export default function Page() {
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={6} className={style.verticallyHorizontallyCenter}>
-                <CodingSkills style={{maxWidth:"80%"}}/>
+                <ManTeleconference/>
             </Grid>
             <Grid item xs={12} sm={6}  className={style.verticallyHorizontallyCenter} style={{paddingTop: 0}}>
                 <List>
