@@ -91,6 +91,138 @@ export const CONTENT_PROPERTIES  = {
         },
         MY_SKILLSET: {
             TITLE: "My Skillset",
+            SKILLSET: {
+                LANGUAGES: [
+                    {
+                        name: "Javascript",
+                        icon: "fluent:javascript-24-regular",
+                        url : "",
+                        
+                    },
+                    {
+                        name: "Typescript",
+                        icon: "tabler:brand-typescript",
+                        url : "",
+                    },
+                ],
+                FRONTEND: [
+                    {
+                        name: "React.JS",
+                        icon: "vscode-icons:file-type-reactjs",
+                        url : "",
+                    },
+                    {
+                        name: "Next.JS",
+                        icon: "teenyicons:nextjs-outline",
+                        url : "",
+                    },
+                    {
+                        name: "SCSS",
+                        icon: "vscode-icons:file-type-scss",
+                        url : "",
+                    },
+                    {
+                        name: "MaterialUI",
+                        icon: "mdi:material-ui",
+                        url : "",
+                    },
+                    {
+                        name: "Tailwind CSS",
+                        icon: "logos:tailwindcss-icon",
+                        url : "",
+                    },
+                ],
+                STATE_MANAGEMENT: [
+                    {
+                        name: "Redux",
+                        icon: "tabler:brand-redux",
+                        url : "",
+                    },
+                    {
+                        name: "Recoil",
+                        icon: "logos:recoil-icon",
+                        url : "",
+                    },
+                ],
+                BACKEND: [
+                    {
+                        name: "Node.JS",
+                        icon: "logos:nodejs",
+                        url : "",
+                    },
+                    {
+                        name: "Express.JS",
+                        icon: "logos:express",
+                        url : "",
+                    },
+                    {
+                        name: "Nest.JS",
+                        icon: "",
+                        url: "/nestjs-icon.svg",
+                    },
+                    {
+                        name: "Hapi.JS",
+                        icon: "logos:hapi",
+                        url : "",
+                    },
+                ],
+                DATABASE: [
+                    {
+                        name: "MongoDB",
+                        icon: "logos:mongodb",
+                        url : "",
+                    },
+                    {
+                        name: "MySQL",
+                        icon: "logos:mysql",
+                        url : "",
+                    },
+                ],
+                VERSION_CONTROL: [
+                    {
+                        name: "Git",
+                        icon: "mdi:git",
+                        url : "",
+                    },
+                    {
+                        name: "Gitlab",
+                        icon: "logos:gitlab",
+                        url : "",
+                    },
+                    {
+                        name: "Github",
+                        icon: "mdi:github",
+                        url : "",
+                    }
+                ],
+                MISC: [
+                    {
+                        name: "GraphQL",
+                        icon: "logos:graphql",
+                        url : "",
+                    },
+                    {
+                        name: "Redis",
+                        icon: "logos:redis",
+                        url : "",
+                    },
+                    {
+                        name: "Kafka",
+                        icon: "logos:kafka",
+                        url : "",
+                    },
+                    {
+                        name: "RabbitMQ",
+                        icon: "logos:rabbitmq-icon",
+                        url : "",
+                    },
+                    {
+                        name: "Firebase",
+                        icon: "logos:firebase",
+                        url : "",
+                    },
+                ]
+            },
         },
     },
 

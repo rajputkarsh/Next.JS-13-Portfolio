@@ -64,7 +64,7 @@ const Navbar = () => {
   );
 
   return (
-    <Box sx={{ display: 'flex', minHeight:'70px !important' }}>
+    <Box sx={{ display: 'flex', minHeight:'64px !important' }}>
       <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight:'64px !important', justifyContent: 'center' }} >
         <Toolbar>
           <Typography

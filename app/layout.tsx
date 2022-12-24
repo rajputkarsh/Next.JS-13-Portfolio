@@ -26,7 +26,7 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
                         <ThemeButton isFloating={true} />
                     </body>
 
-                    <Footer />
+                    {/* <Footer /> */}
 
             </ThemeContext.Provider>
         </html>

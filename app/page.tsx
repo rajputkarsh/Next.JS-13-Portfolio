@@ -11,8 +11,12 @@ import { CONTENT_PROPERTIES } from "../utils/constant";
 
 import CodingBoy from "../components/svg/codingBoy/CodingBoy";
 
+import { Icon } from '@iconify/react';
+
 import style from './homepage.module.css'
 import ManTeleconference from '../components/svg/manTeleconference/ManTeleconference';
+import { titleCase } from "../utils/helper/text";
+import Image from "next/image";
 
 export default function Page() {
 
@@ -104,7 +108,35 @@ export default function Page() {
                     }
                 </Typography>
             </Grid>
+            {
+                Object.entries(CONTENT_PROPERTIES.HOME_PAGE.MY_SKILLSET.SKILLSET).map(([skillType, skill], i) => (
+                    <>
+                    <Grid item xs={12}>
+                        <Typography variant="h5" className={style.bold}>
+                            {
+                                titleCase(skillType)
+                            }
+                        </Typography>
+                    </Grid>           
+                    <Grid item key={i} xs={12} className={style.verticallyHorizontallyCenter}>      
+                        {
+                            skill.map((skillInfo: {name: string, icon:string, url:string}, j: number) => (
+                                <Grid key={`${i}-${j}`} item xs={6} sm={4} md={3} xl={2} className={style.box + " " + style.animatedBox}>
+                                    <div style={{margin:'8px', minHeight:'calc(100% - 16px)', minWidth:'calc(100% - 16px)', backgroundColor: THEME[currentTheme].BACKGROUND}}>
+                                        <div title={skillInfo.name}>
+                                            {
+                                                (skillInfo.icon) ? <Icon icon={skillInfo.icon} style={{fontSize:50}}/> : <Image src={skillInfo.url} alt={skillInfo.name} width={50} height={50} />
 
+                                            }
+                                        </div>
+                                    </div>
+                                </Grid>                                        
+                            ))
+                        }                 
+                    </Grid>                            
+                    </>
+                ))
+            }
         </Grid>
 
     )
