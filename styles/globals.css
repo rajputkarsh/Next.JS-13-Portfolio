@@ -17,14 +17,36 @@
     transition: all 0.25s linear;
   }
 
-  body {
-    @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100;
-    @apply min-h-screen;
-  }
-
   .MuiTypography-root, .MuiButton-root {
     font-family: 'Open Sans', sans-serif !important;
   }
+
+  .Typewriter{
+    display: inline-block;
+    color: #e3405f !important
+  }
+
+  .MuiGrid-item{
+    padding-top: 0 !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .dark::-webkit-scrollbar-track {
+    background: #292a2d;
+  }
+  .light::-webkit-scrollbar-track {
+    background: #DDDEE0;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #E3405F;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E3405F;
+  }  
 
 }
 
