@@ -3,7 +3,7 @@
 import React from 'react';
 import Navbar from '../components/navbar/Navbar';
 import useTheme from '../hooks/useTheme';
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import { ThemeContext } from '../context/theme';
 import ThemeButton from '../components/CustomButtons/ThemeButton';
 import { THEME } from '../utils/theme';

@@ -1,6 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@containers/*": ["containers/*"],
+      "@context/*": ["context/*"],
+      "@hooks/*": ["hooks/*"],
+      "@styles/*": ["styles/*"],
+      "@types/*": ["types/*"],
+      "@helper/*": ["utils/helper/*"],
+      "@constant": ["utils/constant.ts"],
+      "@theme": ["utils/theme.ts"],
+    },
     "lib": [
       "dom",
       "dom.iterable",

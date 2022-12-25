@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,bold,italic&subset=latin,latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt:regular,bold,italic&subset=latin,latin-ext');
+
+@import "./color.module.scss";
+
 @layer base {
 
   html,
@@ -21,13 +24,20 @@
     font-family: 'Open Sans', sans-serif !important;
   }
 
-  .Typewriter{
-    display: inline-block;
-    color: #e3405f !important
+  .ThemeColor{
+    color: $themeColor !important
+  }
+
+  .bold {
+    font-weight: 700 !important;
   }
 
   .MuiGrid-item{
     padding-top: 0 !important;
+  }
+
+  .FullWidth{
+    width: 100%;
   }
 
   ::-webkit-scrollbar {
@@ -41,11 +51,11 @@
     background: #DDDEE0;
   }
   ::-webkit-scrollbar-thumb {
-    background: #E3405F;
+    background: $themeColor;
     border-radius: 5px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #E3405F;
+    background: $themeColor;
   }  
 
 }

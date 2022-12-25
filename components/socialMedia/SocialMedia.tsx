@@ -2,11 +2,11 @@
 import Link from "next/link";
 import { List, ListItem } from "@mui/material";
 import { Icon } from '@iconify/react';
-import { CONTENT_PROPERTIES } from "../../utils/constant";
+import { STATIC_CONTENT } from "../../utils/constant";
 
 <List style={{display: "flex"}}>
 {
-    Object.values(CONTENT_PROPERTIES.SOCIAL_MEDIA_ICONS).map(
+    Object.values(STATIC_CONTENT.SOCIAL_MEDIA_ICONS).map(
         (socialMediaElement) => (
             <ListItem key={`home-social-media-${socialMediaElement.type}`} style={{maxWidth: "max-content"}}>
                 <Link href={socialMediaElement.url}>
