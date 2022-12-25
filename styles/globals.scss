@@ -70,7 +70,9 @@
     background: $themeColor;
   }  
 
+  .Typewriter {
+      display: inline-block;
+      color: $themeColor !important;
+  }
+
 }
-
-
-

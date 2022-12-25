@@ -28,6 +28,7 @@ import { getThemeFromContext } from '../../utils/helper/theme';
 import { redirectTo } from '../../utils/helper/url';
 
 import './Navbar.module.css';
+import { THEME_COLOR } from '@styles/GlobalClassNames';
 
 const drawerWidth = 240;
 
@@ -71,6 +72,7 @@ const Navbar = () => {
             variant="h4"
             onClick={() => {redirectTo(BASE_URL)}}
             component="div"
+            className={THEME_COLOR}
             sx={
               { 
                 flexGrow: 1,
@@ -80,7 +82,6 @@ const Navbar = () => {
                   md: '1.825rem',
                   lg: '2.325rem',
                 },
-                color: STATIC_CONTENT.LOGO_NAME.COLOR,
                 cursor: 'pointer'
               }
             }

@@ -4,7 +4,7 @@ import { titleCase } from "@helper/text";
 import { BOLD, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER } from "@styles/GlobalClassNames";
 import { THEME } from "@theme";
 import { STATIC_CONTENT } from "@constant";
-import style from './SkillSection.module.scss';
+import style from './skillSection.module.scss';
 import { ThemeContext, ThemeContextType } from "@context/theme";
 import { getThemeFromContext } from "@helper/theme";
 import { Icon } from "@iconify/react";
@@ -30,7 +30,7 @@ function SkillSection() {
                     Object.entries(STATIC_CONTENT.HOME_PAGE.MY_SKILLSET.SKILLSET).map(([skillType, skill], i) => (
 
                         skill.map((skillInfo: { name: string, icon: string, url: string }, j: number) => (
-                            <Grid key={`${i}-${j}`} item xs={6} sm={3} md={1} className={style.box + " " + style.animatedBox + " " + VERTICALLY_HORIZONTALLY_CENTER}>
+                            <Grid key={`${i}-${j}`} item xs={3} sm={3} md={1} className={style.box + " " + style.animatedBox + " " + VERTICALLY_HORIZONTALLY_CENTER}>
                                 <div style={{ margin: '8px', minHeight: 'calc(100% - 16px)', minWidth: 'calc(100% - 16px)', backgroundColor: "#FFF", padding: "4px" }}>
                                     <div title={skillInfo.name} className={VERTICALLY_HORIZONTALLY_CENTER}>
                                         {

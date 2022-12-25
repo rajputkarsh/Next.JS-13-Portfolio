@@ -1,4 +1,4 @@
-import { Theme } from "@mui/material";
+
 import { ThemeContextType } from "../../context/theme";
 
 export const getThemeFromContext = (themeContext: ThemeContextType) => {

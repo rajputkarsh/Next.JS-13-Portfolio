@@ -12,12 +12,10 @@ export const STATIC_CONTENT  = {
 
     NAME: {
         TITLE: "Utkarsh",
-        COLOR: '#e3405f',
     },
     
     LOGO_NAME: {
         TITLE : '<UTKARSH />',
-        COLOR: '#e3405f',
     },
 
     NAVBAR_ITEMS : {
@@ -69,7 +67,6 @@ export const STATIC_CONTENT  = {
         TYPEWRITER_TEXT : {
             preText: "const name = ",
             title: '"Utkarsh";',
-            color: "#e3405f",
         },
         INTRODUCTION_TEXTS : [
             "Full Stack Developer 👨‍💻",
