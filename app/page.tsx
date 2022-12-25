@@ -17,13 +17,9 @@ export default function Page() {
 
     return (
         <Grid container spacing={4} sx={{paddingLeft: '10px', paddingRight: '10px', color: THEME[currentTheme].HOME_PAGE.TEXT_COLOR}}>
-
             <Introduction />
-
             <AboutMe />
-
             <SkillSection />
-
         </Grid>
 
     )
