@@ -25,37 +25,24 @@ function SkillSection() {
                     }
                 </Typography>
             </Grid>
-            {
-                Object.entries(STATIC_CONTENT.HOME_PAGE.MY_SKILLSET.SKILLSET).map(([skillType, skill], i) => (
-                    <>
-                        <Grid item xs={12}>
-                            <Typography variant="h5" className={BOLD}>
-                                {
-                                    titleCase(skillType)
-                                }
-                            </Typography>
-                        </Grid>
-                        <Grid item key={i} xs={12} className={VERTICALLY_HORIZONTALLY_CENTER}>
-                            <Grid container>                    
-                                {
-                                    skill.map((skillInfo: { name: string, icon: string, url: string }, j: number) => (
-                                        <Grid key={`${i}-${j}`} item xs={6} sm={3} md={1} className={style.box + " " + style.animatedBox}>
-                                            <div style={{ margin: '8px', minHeight: 'calc(100% - 16px)', minWidth: 'calc(100% - 16px)', backgroundColor: THEME[currentTheme].BACKGROUND }}>
-                                                <div title={skillInfo.name}>
-                                                    {
-                                                        (skillInfo.icon) ? <Icon icon={skillInfo.icon} style={{ fontSize: 50, maxWidth: '95%', maxHeight: '95%' }} /> : <Image src={skillInfo.url} alt={skillInfo.name} width={50} height={50} />
-                                                    }
-                                                </div>
-                                            </div>
-                                        </Grid>
-                                    ))
-                                }
-                            </Grid>
+            <Grid container alignItems="center" justifyContent="center">
+                {
+                    Object.entries(STATIC_CONTENT.HOME_PAGE.MY_SKILLSET.SKILLSET).map(([skillType, skill], i) => (
 
-                        </Grid>
-                    </>
-                ))
-            }
+                        skill.map((skillInfo: { name: string, icon: string, url: string }, j: number) => (
+                            <Grid key={`${i}-${j}`} item xs={6} sm={3} md={1} className={style.box + " " + style.animatedBox + " " + VERTICALLY_HORIZONTALLY_CENTER}>
+                                <div style={{ margin: '8px', minHeight: 'calc(100% - 16px)', minWidth: 'calc(100% - 16px)', backgroundColor: "#FFF", padding: "4px" }}>
+                                    <div title={skillInfo.name} className={VERTICALLY_HORIZONTALLY_CENTER}>
+                                        {
+                                            (skillInfo.icon) ? <Icon icon={skillInfo.icon}  style={{ fontSize: 50, maxWidth: '95%', maxHeight: '95%', color: "#000" }} /> : <Image src={skillInfo.url} alt={skillInfo.name} width={50} height={50} />
+                                        }
+                                    </div>
+                                </div>
+                            </Grid>
+                        ))
+                    ))
+                }
+            </Grid>
         </>
     )
 }
