@@ -13,12 +13,15 @@ function Footer() {
   const {currentTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
 
   return (
-    <footer className={THEME_COLOR} style={{textAlign:"center", margin:0, backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND}} >
+    <footer style={{textAlign:"center", margin:0, color: THEME[currentTheme].NAVBAR_TEXT, backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND}} >
         Made with 
-        <span>❤️</span>
-        by {
-          STATIC_CONTENT.NAME.TITLE
-        }
+        <span> ❤️ </span>
+        by 
+        <span className={THEME_COLOR} >
+          {
+            " "+ STATIC_CONTENT.NAME.TITLE
+          }
+        </span>
     </footer>
   )
 }

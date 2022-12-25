@@ -24,9 +24,10 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
                             { children }
                         </div>                        
                         <ThemeButton isFloating={true} />
+
+                        <Footer />
                     </body>
 
-                    {/* <Footer /> */}
 
             </ThemeContext.Provider>
         </html>
