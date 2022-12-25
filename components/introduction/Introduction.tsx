@@ -8,12 +8,13 @@ import { STATIC_CONTENT } from "@constant";
 
 import style from './introduction.module.scss';
 import TypewriterText from "@components/typewriterText/TypewriterText";
+import { VERTICALLY_HORIZONTALLY_CENTER } from "@styles/GlobalClassNames";
 
 function Introduction() {
   
   return (
     <>
-      <Grid item xs={12} sm={6} className={style.verticallyHorizontallyCenter}>
+      <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
         <List>
           <ListItem className={style.flexTextCenter}>
             

@@ -11,10 +11,11 @@ import { STATIC_CONTENT } from "../utils/constant";
 import { Icon } from '@iconify/react';
 
 import style from './homepage.module.css'
-import ManTeleconference from '../components/svg/manTeleconference/ManTeleconference';
 import { titleCase } from "../utils/helper/text";
 import Image from "next/image";
-import Introduction from "@containers/introduction/Introduction";
+import Introduction from "@components/introduction/Introduction";
+import { SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER } from "@styles/GlobalClassNames";
+import AboutMe from "@components/aboutMe/AboutMe";
 
 export default function Page() {
 
@@ -25,43 +26,11 @@ export default function Page() {
 
             <Introduction />
 
-            {/* about me */}
-            <Grid item xs={12} className={style.sectionTitle}>
-                <Typography variant="h3" className={style.bold}>
-                    {
-                        STATIC_CONTENT.HOME_PAGE.ABOUT_ME.TITLE
-                    }
-                </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6} className={style.verticallyHorizontallyCenter}>
-                <ManTeleconference/>
-            </Grid>
-            <Grid item xs={12} sm={6}  className={style.verticallyHorizontallyCenter} style={{paddingTop: 0}}>
-                <List>
-                    <Typography variant="h4" className={style.bold}>
-                        {
-                            STATIC_CONTENT.HOME_PAGE.ABOUT_ME.CONTENT.TITLE
-                        }
-                    </Typography>
-                    {
-                        STATIC_CONTENT.HOME_PAGE.ABOUT_ME.CONTENT.TEXT.map(
-                            (text, index) => (
-                                <ListItem key={`ABOUT_ME_${index}`}>
-                                    <Typography variant="h6" className={style.bold}>
-                                        {
-                                            text
-                                        }
-                                    </Typography>
-                                </ListItem>
-                            )
-                        )
-                    }
-                </List>
-            </Grid>
+            <AboutMe />
 
 
             {/* skills */}
-            <Grid item xs={12} className={style.sectionTitle}>
+            <Grid item xs={12} className={SECTION_TITLE}>
                 <Typography variant="h3" className={style.bold}>
                     {
                         STATIC_CONTENT.HOME_PAGE.MY_SKILLSET.TITLE
@@ -78,7 +47,7 @@ export default function Page() {
                             }
                         </Typography>
                     </Grid>           
-                    <Grid item key={i} xs={12} className={style.verticallyHorizontallyCenter}>      
+                    <Grid item key={i} xs={12} className={VERTICALLY_HORIZONTALLY_CENTER}>      
                         {
                             skill.map((skillInfo: {name: string, icon:string, url:string}, j: number) => (
                                 <Grid key={`${i}-${j}`} item xs={6} sm={4} md={3} xl={2} className={style.box + " " + style.animatedBox}>

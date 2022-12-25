@@ -24,12 +24,24 @@
     font-family: 'Open Sans', sans-serif !important;
   }
 
-  .ThemeColor{
+  .themeColor{
     color: $themeColor !important
   }
 
   .bold {
     font-weight: 700 !important;
+  }
+
+  .sectionTitle {
+    text-align: center !important;
+    font-weight: 700 !important;
+    margin-top: 5vh;
+  }
+
+  .verticallyHorizontallyCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .MuiGrid-item{
