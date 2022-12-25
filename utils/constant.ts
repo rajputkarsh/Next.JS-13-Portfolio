@@ -8,16 +8,14 @@ export const URL_PROTOCOL              = 'http://';
 export const BASE_URL                  = 'http://localhost:3000/';
 export const BASE_URL_WITHOUT_PROTOCOL = 'localhost:3000/';
 
-export const CONTENT_PROPERTIES  = {
+export const STATIC_CONTENT  = {
 
     NAME: {
         TITLE: "Utkarsh",
-        COLOR: '#e3405f',
     },
     
     LOGO_NAME: {
         TITLE : '<UTKARSH />',
-        COLOR: '#e3405f',
     },
 
     NAVBAR_ITEMS : {
@@ -69,7 +67,6 @@ export const CONTENT_PROPERTIES  = {
         TYPEWRITER_TEXT : {
             preText: "const name = ",
             title: '"Utkarsh";',
-            color: "#e3405f",
         },
         INTRODUCTION_TEXTS : [
             "Full Stack Developer 👨‍💻",

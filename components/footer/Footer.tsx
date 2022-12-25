@@ -1,23 +1,27 @@
 
 'use client';
 
-import { CONTENT_PROPERTIES } from "../../utils/constant";
+import { STATIC_CONTENT } from "../../utils/constant";
 import { THEME } from "../../utils/theme";
 import { ThemeContext, ThemeContextType } from '../../context/theme';
 import { getThemeFromContext } from '../../utils/helper/theme';
 import { useContext } from "react";
+import { THEME_COLOR } from "@styles/GlobalClassNames";
 
 function Footer() {
 
   const {currentTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
 
   return (
-    <footer style={{textAlign:"center", margin:0, backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, color: THEME[currentTheme].HOME_PAGE.TEXT_COLOR}} >
+    <footer style={{textAlign:"center", margin:0, color: THEME[currentTheme].NAVBAR_TEXT, backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND}} >
         Made with 
-        <span>❤️</span>
-        by {
-          CONTENT_PROPERTIES.NAME.TITLE
-        }
+        <span> ❤️ </span>
+        by 
+        <span className={THEME_COLOR} >
+          {
+            " "+ STATIC_CONTENT.NAME.TITLE
+          }
+        </span>
     </footer>
   )
 }

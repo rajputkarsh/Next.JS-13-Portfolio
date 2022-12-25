@@ -1,5 +1,4 @@
 import { Theme, Time } from "../types/common";
-import { SETTINGS } from "./constant";
 
 export const THEME = {
     LIGHT: {

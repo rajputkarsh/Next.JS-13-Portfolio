@@ -20,7 +20,7 @@ import Button from '@mui/material/Button';
 
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { BASE_URL, CONTENT_PROPERTIES } from "../../utils/constant";
+import { BASE_URL, STATIC_CONTENT } from "../../utils/constant";
 import { THEME } from "../../utils/theme";
 import { ThemeContext, ThemeContextType } from '../../context/theme';
 import { getThemeFromContext } from '../../utils/helper/theme';
@@ -28,11 +28,12 @@ import { getThemeFromContext } from '../../utils/helper/theme';
 import { redirectTo } from '../../utils/helper/url';
 
 import './Navbar.module.css';
+import { THEME_COLOR } from '@styles/GlobalClassNames';
 
 const drawerWidth = 240;
 
 const navItems = (color: string) => {
-  return Object.values(CONTENT_PROPERTIES.NAVBAR_ITEMS).map(
+  return Object.values(STATIC_CONTENT.NAVBAR_ITEMS).map(
     (item) => (
       <ListItem key={item.id} disablePadding>
         <ListItemButton sx={{ textAlign: 'center', color: color}}>
@@ -71,6 +72,7 @@ const Navbar = () => {
             variant="h4"
             onClick={() => {redirectTo(BASE_URL)}}
             component="div"
+            className={THEME_COLOR}
             sx={
               { 
                 flexGrow: 1,
@@ -80,12 +82,11 @@ const Navbar = () => {
                   md: '1.825rem',
                   lg: '2.325rem',
                 },
-                color: CONTENT_PROPERTIES.LOGO_NAME.COLOR,
                 cursor: 'pointer'
               }
             }
           >
-            {CONTENT_PROPERTIES.LOGO_NAME.TITLE}
+            {STATIC_CONTENT.LOGO_NAME.TITLE}
           </Typography>
           <IconButton
             aria-label="open drawer"
@@ -98,7 +99,7 @@ const Navbar = () => {
           </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {
-              Object.values(CONTENT_PROPERTIES.NAVBAR_ITEMS).map(
+              Object.values(STATIC_CONTENT.NAVBAR_ITEMS).map(
                 (item) => (
                     <Button key={item.id} className='navbar-buttons' onClick={() => {redirectTo(item.redirect)}} sx={
                         { 
