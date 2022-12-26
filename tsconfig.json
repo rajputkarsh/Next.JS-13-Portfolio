@@ -12,6 +12,7 @@
       "@helper/*": ["utils/helper/*"],
       "@constant": ["utils/constant.ts"],
       "@theme": ["utils/theme.ts"],
+      "@public/*": ["public/*"],
     },
     "lib": [
       "dom",

@@ -38,6 +38,10 @@
     margin-top: 5vh;
   }
 
+  .centerText{
+    text-align: center !important;
+  }
+
   .verticallyHorizontallyCenter {
     display: flex;
     justify-content: center;
@@ -73,6 +77,24 @@
   .Typewriter {
       display: inline-block;
       color: $themeColor !important;
+  }
+
+  .lightDivider{
+    &::before{
+      border-top: thin solid #FFF !important;
+    }
+    &::after{
+      border-top: thin solid #FFF !important;
+    }
+  }
+
+  .darkDivider{
+    &::before{
+      border-top: thin solid #000 !important;
+    }
+    &::after{
+      border-top: thin solid #000 !important;
+    }
   }
 
 }
