@@ -20,6 +20,10 @@
     transition: all 0.25s linear;
   }
 
+  .sectionMargin{
+    margin-top: 10vh;
+  }
+
   .MuiTypography-root, .MuiButton-root {
     font-family: 'Open Sans', sans-serif !important;
   }
@@ -35,7 +39,18 @@
   .sectionTitle {
     text-align: center !important;
     font-weight: 700 !important;
-    margin-top: 5vh;
+  }
+
+  .underline-text {
+    display: inline-block;
+    border-bottom: 2px solid;
+    padding-left: 20px;
+    padding-right: 20px;    
+  }
+
+  .x-padding{
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   .centerText{

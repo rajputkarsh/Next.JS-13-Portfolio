@@ -1,14 +1,14 @@
 import ManTeleconference from "@components/svg/manTeleconference/ManTeleconference"
 import { STATIC_CONTENT } from "@constant"
 import { Grid, List, ListItem, Typography } from "@mui/material"
-import { BOLD, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER } from "@styles/GlobalClassNames"
+import { BOLD, SECTION_TITLE, UNDERLINE_TEXT, VERTICALLY_HORIZONTALLY_CENTER } from "@styles/GlobalClassNames"
 
 
 function AboutMe() {
   return (
-    <>
+    <Grid container  className="sectionMargin">
           <Grid item xs={12} className={SECTION_TITLE}>
-            <Typography variant="h3" className={BOLD}>
+            <Typography variant="h3" className={BOLD + " " + UNDERLINE_TEXT}>
                 {
                     STATIC_CONTENT.HOME_PAGE.ABOUT_ME.TITLE
                 }
@@ -39,7 +39,7 @@ function AboutMe() {
                 }
             </List>
         </Grid>    
-    </>
+    </Grid>
   )
 }
 
