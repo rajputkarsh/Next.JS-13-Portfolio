@@ -112,4 +112,17 @@
     }
   }
 
+  .vertical-timeline{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  .vertical-timeline-element-date{
+    font-weight: 700 !important;
+  }
+
+  .vertical-timeline::before {
+    background: $themeColor !important;
+  }  
+
 }

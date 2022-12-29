@@ -54,11 +54,11 @@ const Navbar = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight: '100vh' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight: '100vh' }}>
       <Divider />
       <List sx={{}}>
         {
-          navItems(THEME[currentTheme].NAVBAR_TEXT)
+          navItems(THEME[currentTheme].TEXT)
         }
       </List>
     </Box>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
   return (
     <Box sx={{ display: 'flex', minHeight:'64px !important' }}>
-      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight:'64px !important', justifyContent: 'center' }} >
+      <AppBar component="nav" sx={{ backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'64px !important', justifyContent: 'center' }} >
         <Toolbar>
           <Typography
             variant="h4"
@@ -93,7 +93,7 @@ const Navbar = () => {
             edge="start"
             size="medium"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, color: THEME[currentTheme].NAVBAR_TEXT }}
+            sx={{ mr: 2, display: { sm: 'none' }, color: THEME[currentTheme].TEXT }}
           >
             <MenuIcon fontSize="large" />
           </IconButton>
@@ -103,7 +103,7 @@ const Navbar = () => {
                 (item) => (
                     <Button key={item.id} className='navbar-buttons' onClick={() => {redirectTo(item.redirect)}} sx={
                         { 
-                          color: THEME[currentTheme].NAVBAR_TEXT,
+                          color: THEME[currentTheme].TEXT,
                           marginLeft: {
                             xs: '3px', 
                             sm: '4px', 

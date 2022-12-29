@@ -20,7 +20,7 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
                         <header>
                             <Navbar />                    
                         </header>
-                        <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 125px)'}}>
+                        <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 180px)'}}>
                             { children }
                         </div>                        
                         <ThemeButton isFloating={true} />

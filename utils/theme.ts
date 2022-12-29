@@ -2,9 +2,7 @@ import { Theme, Time } from "../types/common";
 
 export const THEME = {
     LIGHT: {
-        NAVBAR_BACKGROUND: '#FFFFFF',
-        NAVBAR_TEXT: '#000000',
-        
+        TEXT: '#000000',        
         BACKGROUND: '#FFFFFF',
         
         HOME_PAGE: {
@@ -12,9 +10,7 @@ export const THEME = {
         }
     },
     DARK: {
-        NAVBAR_BACKGROUND: '#1D1D1D',
-        NAVBAR_TEXT: '#FFFFFF',
-
+        TEXT: '#FFFFFF',
         BACKGROUND: '#1D1D1D',
         
         HOME_PAGE: {
