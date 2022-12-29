@@ -8,7 +8,7 @@
       "@context/*": ["context/*"],
       "@hooks/*": ["hooks/*"],
       "@styles/*": ["styles/*"],
-      "@types/*": ["types/*"],
+      "@type/*": ["types/*"],
       "@helper/*": ["utils/helper/*"],
       "@constant": ["utils/constant.ts"],
       "@theme": ["utils/theme.ts"],

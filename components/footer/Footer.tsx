@@ -13,7 +13,7 @@ function Footer() {
   const {currentTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
 
   return (
-    <footer style={{paddingTop: "5vh", textAlign:"center", margin:0, color: THEME[currentTheme].NAVBAR_TEXT, backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND}} >
+    <footer style={{paddingTop: "5vh", textAlign:"center", margin:0, color: THEME[currentTheme].TEXT, backgroundColor: THEME[currentTheme].BACKGROUND}} >
         Made with 
         <span> ❤️ </span>
         by 

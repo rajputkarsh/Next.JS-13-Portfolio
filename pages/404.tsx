@@ -25,7 +25,7 @@ function NotFoundPage() {
           <header>
             <Navbar />                    
           </header>
-          <Grid container alignItems={"center"} justifyContent={"center"} style={{color: THEME[currentTheme].NAVBAR_TEXT, backgroundColor: THEME[currentTheme].NAVBAR_BACKGROUND, minHeight:'calc(100vh)'}}>
+          <Grid container alignItems={"center"} justifyContent={"center"} style={{color: THEME[currentTheme].TEXT, backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh)'}}>
             <Grid item xs={12} sm={12} md={5} lg={5} xl={5} className={CENTER_TEXT}>
               <Typography variant="h3" >Page Not Found</Typography>
               <Divider className={currentTheme === SETTINGS.AVAILABLE_THEMES.LIGHT ? DARK_DIVIDER : LIGHT_DIVIDER}>INITIATING MISSION</Divider>
