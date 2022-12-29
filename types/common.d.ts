@@ -6,7 +6,7 @@ export type TimelineObject = {
   index: number,
   event: string,
   icon : string,
-  date: string | number,
+  date: string,
   content: null | string,
   contentIcon: null | string | StaticImport,
 };

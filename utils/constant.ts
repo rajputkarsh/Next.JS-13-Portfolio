@@ -272,7 +272,7 @@ export const STATIC_CONTENT  = {
                 index: 6,
                 event: 'PRESENT',
                 icon : 'bx:party',
-                date: (new Date()).getFullYear(),
+                date: (new Date()).getFullYear().toString(),
                 content: "",
                 contentIcon: "",
             },            
