@@ -112,4 +112,8 @@
     }
   }
 
+  .vertical-timeline::before {
+    background: $themeColor !important;
+  }  
+
 }
