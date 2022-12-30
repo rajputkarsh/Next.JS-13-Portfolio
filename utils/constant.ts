@@ -284,31 +284,39 @@ export const STATIC_CONTENT  = {
         },
     },
 
-    SOCIAL_MEDIA_ICONS : {
-        LINKEDIN: {
-            title: "LinkedIn",
-            url  : "https://www.linkedin.com/in/utkarsh-rajput/",
-            type : "linkedin",
-            icon : "logos:linkedin-icon"
-        },
-        GITHUB : {
-            title: "Github",
-            url  : "https://github.com/rajputkarsh",
-            type : "github",
-            icon : "logos:github-icon",
-        },
-        TWITTER : {
-            title: "Twitter",
-            url  : "https://twitter.com/thedevperson",
-            type : "twitter",
-            icon : "logos:twitter"
-        },
-        STACKOVERFLOW : {
-            title: "Stack Overflow",
-            url  : "https://stackoverflow.com/users/15149125/utkarsh",
-            type : "stackoverflow",
-            icon : "logos:stackoverflow-icon",
-        },
+    EXPERIENCE : {
+        TITLE: "Experience",
+        BODY : "I've been working in the industry for about 3 years now. I've started my journey as a Web Developer and currently I'm working as a MERN Stack developer."
+    },
+
+    SOCIAL_MEDIA : {
+        TITLE: "Follow Me On",
+        ICONS: {
+            LINKEDIN: {
+                title: "LinkedIn",
+                url  : "https://www.linkedin.com/in/utkarsh-rajput/",
+                type : "linkedin",
+                icon : "logos:linkedin-icon"
+            },
+            GITHUB : {
+                title: "Github",
+                url  : "https://github.com/rajputkarsh",
+                type : "github",
+                icon : "logos:github-icon",
+            },
+            TWITTER : {
+                title: "Twitter",
+                url  : "https://twitter.com/thedevperson",
+                type : "twitter",
+                icon : "logos:twitter"
+            },
+            STACKOVERFLOW : {
+                title: "Stack Overflow",
+                url  : "https://stackoverflow.com/users/15149125/utkarsh",
+                type : "stackoverflow",
+                icon : "logos:stackoverflow-icon",
+            },            
+        }
     },
 
     EMAIL : {
