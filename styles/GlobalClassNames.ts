@@ -2,6 +2,8 @@
 export const BOLD = "bold";
 export const THEME_COLOR = "themeColor";
 export const SECTION_TITLE = "sectionTitle";
+export const SECTION_MARGIN = "sectionMargin";
+export const BOTTOM_MARGIN = "bottomMargin";
 export const CENTER_TEXT = "centerText";
 export const X_PADDING = 'x-padding';
 export const UNDERLINE_TEXT = 'underline-text';
