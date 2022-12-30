@@ -18,7 +18,7 @@ function AboutMe() {
             <ManTeleconference/>
         </Grid>
         <Grid item xs={12} sm={6}  className={VERTICALLY_HORIZONTALLY_CENTER} style={{paddingTop: 0}}>
-            <List>
+            <List sx={{paddingLeft: '40px'}}>
                 <Typography variant="h4" className={BOLD}>
                     {
                         STATIC_CONTENT.HOME_PAGE.ABOUT_ME.CONTENT.TITLE

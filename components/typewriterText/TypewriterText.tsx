@@ -8,7 +8,7 @@ import globalColor from "@styles/color.module.scss";
 function TypewriterText({preText, text, style}: {preText: string, text: string, style: any}) {
 
   return (
-    <Typography variant="h3" className={BOLD}>
+    <Typography variant="h4" className={BOLD}>
       { preText }
       <span className={globalColor.themeColor}>
         {
