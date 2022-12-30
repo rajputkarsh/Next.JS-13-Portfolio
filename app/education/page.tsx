@@ -1,6 +1,6 @@
 "use client";
 
-import EducationCertificate from "@components/svg/education/EducationCertificate";
+import EducationCertificate from "@components/svg/educationCertificate/EducationCertificate";
 import Timeline from "@components/timeline/Timeline";
 import { STATIC_CONTENT } from "@constant";
 import { ThemeContext, ThemeContextType } from "@context/theme";
