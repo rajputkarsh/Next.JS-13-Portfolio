@@ -21,15 +21,15 @@
   }
 
   .sectionMargin{
-    margin-top: 10vh;
+    margin-top: 10vh !important;
+  }
+
+  .bottomMargin{
+    margin-bottom: 5vh !important;    
   }
 
   .MuiTypography-root, .MuiButton-root {
     font-family: 'Open Sans', sans-serif !important;
-  }
-
-  .themeColor{
-    color: $themeColor !important
   }
 
   .bold {
