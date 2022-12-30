@@ -2,34 +2,39 @@
 
 import React from 'react';
 import Navbar from '../components/navbar/Navbar';
+import Footer from '../components/footer/Footer';
+import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material';
 import useTheme from '../hooks/useTheme';
-import "../styles/globals.scss";
 import { ThemeContext } from '../context/theme';
 import ThemeButton from '../components/CustomButtons/ThemeButton';
 import { THEME } from '../utils/theme';
-import Footer from '../components/footer/Footer';
+import "../styles/globals.scss";
 
 const RootLayout = ({ children } : { children: React.ReactNode }) => {
 
     const {theme: currentTheme, setTheme} = useTheme();
 
+    const muiTheme = responsiveFontSizes(createTheme())
+
     return (
         <html lang="en">
-            <ThemeContext.Provider value={{currentTheme, setTheme}}>
-                    <body>
-                        <header>
-                            <Navbar />                    
-                        </header>
-                        <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 180px)'}}>
-                            { children }
-                        </div>                        
-                        <ThemeButton isFloating={true} />
+            <ThemeProvider theme={muiTheme}>
+                <ThemeContext.Provider value={{currentTheme, setTheme}}>
+                        <body>
+                            <header>
+                                <Navbar />                    
+                            </header>
+                            <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 180px)'}}>
+                                { children }
+                            </div>                        
+                            <ThemeButton isFloating={true} />
 
-                        <Footer />
-                    </body>
+                            <Footer />
+                        </body>
 
 
-            </ThemeContext.Provider>
+                </ThemeContext.Provider>
+            </ThemeProvider>
         </html>
     );
 }

@@ -17,7 +17,7 @@ function SkillSection() {
     const { currentTheme }: ThemeContextType = getThemeFromContext(useContext(ThemeContext));
 
     return (
-        <Grid container className="sectionMargin">
+        <Grid container className="sectionMargin" justifyContent={'center'}>
             <Grid item xs={12} className={SECTION_TITLE}>
                 <Typography variant="h3" className={BOLD + " " + UNDERLINE_TEXT}>
                     {

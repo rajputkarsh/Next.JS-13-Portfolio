@@ -1,6 +1,5 @@
 
 import { Grid, List, ListItem, Typography } from "@mui/material";
-import Typewriter from "typewriter-effect";
 
 import CodingBoy from "@components/svg/codingBoy/CodingBoy";
 
@@ -16,12 +15,12 @@ function Introduction() {
     <>
       <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
         <List>
-          <ListItem className={style.flexTextCenter}>
+          <ListItem className={style.flexTextCenter} disableGutters={true}>
             
             <TypewriterText
               preText={STATIC_CONTENT.HOME_PAGE.TYPEWRITER_TEXT.preText}
               text={STATIC_CONTENT.HOME_PAGE.TYPEWRITER_TEXT.title}
-              style={style} 
+              style={{}} 
             />
             
           </ListItem>
@@ -30,7 +29,7 @@ function Introduction() {
             STATIC_CONTENT.HOME_PAGE.INTRODUCTION_TEXTS.map(
               (text, index) => (
                 <ListItem key={`introduction_text-${index}`} className={style.flexTextCenter + " " + style.textCenter} >
-                  <Typography variant="h4" className={style.bold + " "}>
+                  <Typography variant="h5" className={style.bold + " "}>
                     {text}
                   </Typography>
                 </ListItem>
