@@ -35,7 +35,7 @@ function NotFoundPage() {
               <Image src={NotFoundPic} alt="oops" />
             </Grid>
             <Grid item xs={12} className={CENTER_TEXT}>
-              <Button color="warning" variant="contained" onClick={() => redirectTo("/")}>Go Back</Button>
+              <Button color="error" variant="contained" onClick={() => redirectTo("/")}>Go Back</Button>
             </Grid>
           </Grid>
 
