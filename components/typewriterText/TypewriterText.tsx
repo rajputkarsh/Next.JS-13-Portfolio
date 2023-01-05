@@ -1,16 +1,20 @@
 
 import { Typography } from "@mui/material";
 import Typewriter from "typewriter-effect";
-
-import { BOLD } from "@styles/GlobalClassNames";
-import globalColor from "@styles/color.module.scss";
+import { BOLD, THEME_COLOR } from "@styles/GlobalClassNames";
 
 function TypewriterText({preText, text, style}: {preText: string, text: string, style: any}) {
 
   return (
-    <Typography variant="h4" className={BOLD}>
+    <Typography variant="h3" className={BOLD}   sx={{
+      fontSize: {
+        md: 40,
+        sm: 28,
+        xs: 25
+      }
+    }}>
       { preText }
-      <span className={globalColor.themeColor}>
+      <span className={THEME_COLOR}>
         {
           text.substring(0, 2)
         }

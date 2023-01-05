@@ -8,7 +8,7 @@ function EducationCertificate() {
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
       width="571.9401"
-      height="689.03807"
+      height="300.03807"
       viewBox="0 0 571.9401 689.03807"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >

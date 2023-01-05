@@ -296,13 +296,13 @@ export const STATIC_CONTENT  = {
                 title: "LinkedIn",
                 url  : "https://www.linkedin.com/in/utkarsh-rajput/",
                 type : "linkedin",
-                icon : "logos:linkedin-icon"
+                icon : "cib:linkedin-in"
             },
             GITHUB : {
                 title: "Github",
                 url  : "https://github.com/rajputkarsh",
                 type : "github",
-                icon : "logos:github-icon",
+                icon : "uiw:github",
             },
             TWITTER : {
                 title: "Twitter",

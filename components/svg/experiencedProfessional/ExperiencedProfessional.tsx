@@ -8,7 +8,7 @@ function ExperiencedProfessional() {
       className={style.experiencedProfessional}
       xmlns="http://www.w3.org/2000/svg"
       width="801.92126"
-      height="597.4574"
+      height="300.4574"
       viewBox="0 0 801.92126 597.4574"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >

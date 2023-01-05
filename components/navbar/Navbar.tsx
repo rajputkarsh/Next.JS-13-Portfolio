@@ -93,11 +93,11 @@ const Navbar = () => {
             edge="start"
             size="medium"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' }, color: THEME[currentTheme].TEXT }}
+          sx={{ mr: 2, display: { md: 'none' }, color: THEME[currentTheme].TEXT }}
           >
             <MenuIcon fontSize="large" />
           </IconButton>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
             {
               Object.values(STATIC_CONTENT.NAVBAR_ITEMS).map(
                 (item) => (
@@ -145,7 +145,7 @@ const Navbar = () => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', md: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
         >

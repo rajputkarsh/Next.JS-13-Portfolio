@@ -1,17 +1,5 @@
-#codingBoy{
-  max-width: 90%;
+
+.codingBoy{
+  max-width: 85%;
   justify-content: center;
-  /* -ms-transform: translateY(50%);
-  transform: translateY(50%); */
-  animation: MoveUpDown 1s linear infinite;
-}
-
-
-@keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 50px;
-  }
 }
