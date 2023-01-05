@@ -49,7 +49,7 @@ function Experince() {
             STATIC_CONTENT.SOCIAL_MEDIA.TITLE
           }
         </Typography>  
-        <SocialMedia color={THEME[currentTheme].TEXT} />
+        <SocialMedia color={THEME[currentTheme].TEXT} email={false} />
       </Grid>
 
     </Grid>

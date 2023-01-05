@@ -2,6 +2,7 @@ import { Theme } from "@type/common";
 import BCM_LOGO from '@public/bcm.gif';
 import DAVIET_LOGO from '@public/daviet.jpg';
 import SCALER_LOGO from '@public/scaler.png';
+import PROFILE_PIC from '@public/profile-pic.webp';
 
 // export const URL_PROTOCOL              = 'https://';
 // export const BASE_URL                  = 'https://utkarshrajput.com/';
@@ -289,6 +290,12 @@ export const STATIC_CONTENT  = {
         BODY : "I've been working in the industry for about 3 years now. I've started my journey as a Web Developer and currently I'm working as a MERN Stack developer."
     },
 
+    CONTACT: {
+        TITLE: "Contact",
+        BODY : "I'm reachable on all popular social media applications. You can contact me on the below mentioned places. I'll try to get back to you as soon as possible.",
+        IMAGE: PROFILE_PIC,
+    },
+
     SOCIAL_MEDIA : {
         TITLE: "Follow Me On",
         ICONS: {
@@ -321,8 +328,8 @@ export const STATIC_CONTENT  = {
 
     EMAIL : {
         title: "Email",
-        url  : "r.utkarsh.0010@gmail.com",
-        type : "email",
+        url  : "mailto:r.utkarsh.0010@gmail.com",
+        icon : "material-symbols:alternate-email-rounded"
     }
 };
 
