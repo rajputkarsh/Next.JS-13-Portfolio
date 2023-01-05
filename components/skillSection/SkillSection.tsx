@@ -1,8 +1,6 @@
 
 import { Grid, Typography } from "@mui/material";
-import { titleCase } from "@helper/text";
-import { BOLD, SECTION_MARGIN, SECTION_TITLE, UNDERLINE_TEXT, VERTICALLY_HORIZONTALLY_CENTER } from "@styles/GlobalClassNames";
-import { THEME } from "@theme";
+import { BOLD, SECTION_MARGIN, SECTION_TITLE, THEME_COLOR, VERTICALLY_HORIZONTALLY_CENTER } from "@styles/GlobalClassNames";
 import { STATIC_CONTENT } from "@constant";
 import style from './skillSection.module.scss';
 import { ThemeContext, ThemeContextType } from "@context/theme";
@@ -13,13 +11,10 @@ import { useContext } from "react";
 
 function SkillSection() {
 
-
-    const { currentTheme }: ThemeContextType = getThemeFromContext(useContext(ThemeContext));
-
     return (
         <Grid container className={SECTION_MARGIN} justifyContent={'center'}>
             <Grid item xs={12} className={SECTION_TITLE}>
-                <Typography variant="h4" className={BOLD + " " + UNDERLINE_TEXT}>
+                <Typography variant="h3" className={BOLD + " " + THEME_COLOR}>
                     {
                         STATIC_CONTENT.HOME_PAGE.MY_SKILLSET.TITLE
                     }

@@ -9,5 +9,4 @@ export const X_PADDING = 'x-padding';
 export const UNDERLINE_TEXT = 'underline-text';
 export const VERTICALLY_HORIZONTALLY_CENTER = "verticallyHorizontallyCenter";
 
-export const DARK_DIVIDER = "darkDivider";
-export const LIGHT_DIVIDER = "lightDivider";
+export const COLORED_DIVIDER = "coloredDivider";

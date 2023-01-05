@@ -5,7 +5,7 @@ import { SETTINGS } from '../utils/constant';
 
 const useTheme = () => {
     
-    const [theme, setTheme] = useState<Theme>(SETTINGS.AVAILABLE_THEMES.LIGHT);
+    const [theme, setTheme] = useState<Theme>(SETTINGS.AVAILABLE_THEMES.DARK);
 
     useEffect(() => {
         const currentTime: Time = new Date().getHours();

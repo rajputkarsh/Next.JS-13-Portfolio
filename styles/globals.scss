@@ -28,6 +28,11 @@
     margin-bottom: 5vh !important;    
   }
 
+  .MuiGrid-container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .MuiTypography-root, .MuiButton-root {
     font-family: 'Open Sans', sans-serif !important;
   }
@@ -75,11 +80,9 @@
     width: 10px;
     height: 10px;
   }
-  .dark::-webkit-scrollbar-track {
-    background: #292a2d;
-  }
-  .light::-webkit-scrollbar-track {
-    background: #DDDEE0;
+
+  ::-webkit-scrollbar-track {
+    background: #dddcdc;
   }
   ::-webkit-scrollbar-thumb {
     background: $themeColor;
@@ -94,23 +97,15 @@
       color: $themeColor !important;
   }
 
-  .lightDivider{
+  .coloredDivider{
     &::before{
-      border-top: thin solid #FFF !important;
+      border-top: thin solid $themeColor !important;
     }
     &::after{
-      border-top: thin solid #FFF !important;
+      border-top: thin solid $themeColor !important;
     }
   }
 
-  .darkDivider{
-    &::before{
-      border-top: thin solid #000 !important;
-    }
-    &::after{
-      border-top: thin solid #000 !important;
-    }
-  }
 
   .vertical-timeline{
     padding-top: 0 !important;

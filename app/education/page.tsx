@@ -6,7 +6,7 @@ import { STATIC_CONTENT } from "@constant";
 import { ThemeContext, ThemeContextType } from "@context/theme";
 import { getThemeFromContext } from "@helper/theme";
 import { Grid, Typography } from "@mui/material";
-import { SECTION_MARGIN, THEME_COLOR, BOTTOM_MARGIN, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER, UNDERLINE_TEXT } from "@styles/GlobalClassNames";
+import { SECTION_MARGIN, THEME_COLOR, BOTTOM_MARGIN, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER, BOLD } from "@styles/GlobalClassNames";
 import { THEME } from "@theme";
 import { useContext } from "react";
 
@@ -17,24 +17,24 @@ function Education() {
   return (
     <Grid container justifyContent={'center'} style={{color: THEME[currentTheme].TEXT}}>
       <Grid item xs={12} className={SECTION_TITLE + " " + BOTTOM_MARGIN}>
-          <Typography variant="h3" className={THEME_COLOR + " " + UNDERLINE_TEXT}>
+          <Typography variant="h3" className={THEME_COLOR + " " + BOLD}>
               {
                   STATIC_CONTENT.EDUCATION.TITLE
               }
           </Typography>
       </Grid>
-      <Grid item xs={12} sm={4} className={VERTICALLY_HORIZONTALLY_CENTER}>
+      <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
             <EducationCertificate />
       </Grid>
-        <Grid item xs={12} sm={8}  className={VERTICALLY_HORIZONTALLY_CENTER} style={{paddingTop: 0}}>
-            <Typography variant="h5">
+        <Grid item xs={12} sm={6}  className={VERTICALLY_HORIZONTALLY_CENTER} style={{paddingTop: 0}}>
+            <Typography variant="h6" sx={{padding:'15px'}}>
               {
                 STATIC_CONTENT.EDUCATION.BODY
               }
             </Typography>
         </Grid>
         <Grid item xs={12} className={SECTION_MARGIN + " " + SECTION_TITLE + " " + BOTTOM_MARGIN}>
-          <Typography variant="h4">
+          <Typography variant="h4" className={THEME_COLOR + " " + BOLD}>
               {
                   STATIC_CONTENT.EDUCATION.TIMELINE.TITLE
               }
