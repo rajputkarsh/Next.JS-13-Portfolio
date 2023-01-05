@@ -1,6 +1,13 @@
 
 $themeColor: #E3405F;
 
+$themeColorR: 227;
+$themeColorG: 64;
+$themeColorB: 95;
+
+@function themeColorRGBA($A){
+    @return rgb($themeColorR, $themeColorG, $themeColorB, $A);
+}
 
 .themeColor {
     color: $themeColor !important;

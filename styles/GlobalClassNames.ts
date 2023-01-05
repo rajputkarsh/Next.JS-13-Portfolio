@@ -8,5 +8,7 @@ export const CENTER_TEXT = "centerText";
 export const X_PADDING = 'x-padding';
 export const UNDERLINE_TEXT = 'underline-text';
 export const VERTICALLY_HORIZONTALLY_CENTER = "verticallyHorizontallyCenter";
+export const VERTICALLY_CENTER = "verticallyCenter";
+export const HORIZONTALLY_CENTER = "horizontallyCenter";
 
 export const COLORED_DIVIDER = "coloredDivider";

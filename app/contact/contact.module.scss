@@ -1,0 +1,9 @@
+
+@import '../../styles/color.module.scss';
+
+.shadow {
+  &:hover {
+    box-shadow: themeColorRGBA(0.55)  0px 5px 25px ;
+    transition: 0.5s ease-out 30ms 
+  }
+}

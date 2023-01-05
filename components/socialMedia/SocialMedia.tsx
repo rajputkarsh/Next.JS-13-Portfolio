@@ -4,7 +4,7 @@ import { List, ListItem } from "@mui/material";
 import { Icon } from '@iconify/react';
 import { STATIC_CONTENT } from "../../utils/constant";
 
-function SocialMedia({color}: {color: string}){
+function SocialMedia({color, email}: {color: string, email:boolean}){
     return (
         <List style={{display: "flex", justifyContent:"center"}}>
         {
@@ -19,6 +19,17 @@ function SocialMedia({color}: {color: string}){
                     </ListItem>
                 )
             )
+        }
+        {
+            email ? 
+                <ListItem key={`home-social-media-email`} style={{maxWidth: "max-content"}}>
+                    <Link href={STATIC_CONTENT.EMAIL.url}>
+                        {
+                            <Icon icon={STATIC_CONTENT.EMAIL.icon} style={{fontSize:40, color:color}}/>
+                        }
+                    </Link>
+                </ListItem>
+            : null
         }
         </List>        
     )

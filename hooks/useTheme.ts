@@ -9,9 +9,7 @@ const useTheme = () => {
 
     useEffect(() => {
         const currentTime: Time = new Date().getHours();
-        let currentTheme: Theme = localStorage.getItem("theme") as Theme;
-
-        setTheme(currentTheme ? (currentTheme) : ((currentTime > 18 || currentTime < 5) ? SETTINGS.AVAILABLE_THEMES.DARK : SETTINGS.AVAILABLE_THEMES.LIGHT));        
+        setTheme((currentTime > 18 || currentTime < 5) ? SETTINGS.AVAILABLE_THEMES.DARK : SETTINGS.AVAILABLE_THEMES.LIGHT);        
     }, []);
 
     return {theme: theme as Theme, setTheme};
