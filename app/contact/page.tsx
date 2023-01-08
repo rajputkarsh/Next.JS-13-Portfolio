@@ -3,11 +3,11 @@
 
 import SocialMedia from '@components/socialMedia/SocialMedia';
 import ArticlePublish from '@components/svg/articlePublish/ArticlePublish';
-import { STATIC_CONTENT } from '@constant';
+import { STATIC_CONTENT, THEME_COLOR_HEX } from '@constant';
 import { ThemeContextType } from '@context/theme';
 import { ThemeContext } from '@context/theme';
 import { getThemeFromContext } from '@helper/theme';
-import { Grid, Typography } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 import { BOLD, BOTTOM_MARGIN, HORIZONTALLY_CENTER, SECTION_TITLE, THEME_COLOR, VERTICALLY_CENTER, VERTICALLY_HORIZONTALLY_CENTER, X_PADDING } from '@styles/GlobalClassNames';
 import { THEME } from '@theme';
 import Image from 'next/image';
@@ -53,6 +53,24 @@ function Contact() {
         <Typography variant="h6">
           { STATIC_CONTENT.BLOG_SECTION.BODY }
         </Typography>
+
+        <br/><br/>
+
+        <Button 
+          variant="outlined" 
+          color='error' 
+          sx={
+            {
+              color: THEME[currentTheme].TEXT,
+              ':hover': {
+                border: `1px solid ${THEME[currentTheme].TEXT}`,
+                color: THEME_COLOR_HEX,
+              }              
+            }
+          }
+        >
+          View My Blogs
+        </Button>
   
       </Grid>
 
