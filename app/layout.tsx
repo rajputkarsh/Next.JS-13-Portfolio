@@ -8,6 +8,9 @@ import useTheme from '../hooks/useTheme';
 import { ThemeContext } from '../context/theme';
 import ThemeButton from '../components/CustomButtons/ThemeButton';
 import { THEME } from '../utils/theme';
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import "../styles/globals.scss";
 
 const RootLayout = ({ children } : { children: React.ReactNode }) => {
@@ -20,19 +23,18 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
         <html lang="en">
             <ThemeProvider theme={muiTheme}>
                 <ThemeContext.Provider value={{currentTheme, setTheme}}>
-                        <body>
-                            <header>
-                                <Navbar />                    
-                            </header>
-                            <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 180px)'}}>
-                                { children }
-                            </div>                        
-                            <ThemeButton isFloating={true} />
+                    <body>
+                        <ToastContainer />
+                        <header>
+                            <Navbar />                    
+                        </header>
+                        <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 180px)'}}>
+                            { children }
+                        </div>                        
+                        <ThemeButton isFloating={true} />
 
-                            <Footer />
-                        </body>
-
-
+                        <Footer />
+                    </body>
                 </ThemeContext.Provider>
             </ThemeProvider>
         </html>

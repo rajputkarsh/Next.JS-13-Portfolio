@@ -1,14 +1,15 @@
 "use client";
 
+import { useContext } from "react";
+import { Button, Grid, Typography } from "@mui/material";
 import SocialMedia from "@components/socialMedia/SocialMedia";
 import ExperiencedProfessional from "@components/svg/experiencedProfessional/ExperiencedProfessional";
-import { STATIC_CONTENT } from "@constant";
+import { STATIC_CONTENT, THEME_COLOR_HEX } from "@constant";
 import { ThemeContext, ThemeContextType } from "@context/theme";
 import { getThemeFromContext } from "@helper/theme";
-import { Button, Grid, Typography } from "@mui/material";
-import { SECTION_MARGIN, THEME_COLOR, BOTTOM_MARGIN, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER, BOLD } from "@styles/GlobalClassNames";
 import { THEME } from "@theme";
-import { useContext } from "react";
+import { SECTION_MARGIN, THEME_COLOR, BOTTOM_MARGIN, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER, BOLD } from "@styles/GlobalClassNames";
+import { toast } from 'react-toastify';
 
 function Experince() {
 
@@ -38,7 +39,18 @@ function Experince() {
             </Typography>  
           </Grid>
           <Grid item xs={12} justifyContent="center" className={SECTION_TITLE}>
-              <Button variant="contained" color="error">Download my resume</Button>
+              <Button 
+                variant="contained" 
+                color="error" sx={
+                  { 
+                    backgroundColor: THEME_COLOR_HEX,
+                    ':hover': {
+                      backgroundColor: THEME_COLOR_HEX,
+                    }              
+                  }
+                  }
+                onClick={() => {toast.error("We'll get back to you.")}}
+              >Download my resume</Button>
           </Grid>
         </Grid>
       </Grid>

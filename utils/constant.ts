@@ -12,6 +12,8 @@ export const URL_PROTOCOL              = 'http://';
 export const BASE_URL                  = '/';
 export const BASE_URL_WITHOUT_PROTOCOL = '/';
 
+export const THEME_COLOR_HEX = '#E3405F';
+
 export const STATIC_CONTENT  = {
 
     NAME: {
