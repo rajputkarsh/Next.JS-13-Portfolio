@@ -298,6 +298,7 @@ export const STATIC_CONTENT  = {
 
     SOCIAL_MEDIA : {
         TITLE: "Follow Me On",
+        ALT_TITLE: "Find Me On",
         ICONS: {
             LINKEDIN: {
                 title: "LinkedIn",
@@ -324,6 +325,11 @@ export const STATIC_CONTENT  = {
                 icon : "logos:stackoverflow-icon",
             },            
         }
+    },
+
+    BLOG_SECTION: {
+        TITLE: 'Blogs',
+        BODY : "I don't write frequently but when I do something awesome, I do try to document it so it can be helpful to others."
     },
 
     EMAIL : {
