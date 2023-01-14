@@ -24,11 +24,7 @@ function Experince() {
               }
           </Typography>
       </Grid>
-      
-      <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
-            <ExperiencedProfessional />
-      </Grid>
-      
+            
       <Grid item xs={12} sm={6}  className={VERTICALLY_HORIZONTALLY_CENTER} >
           <Grid container>
           <Grid item xs={12} justifyContent="center" >
@@ -54,7 +50,10 @@ function Experince() {
           </Grid>
         </Grid>
       </Grid>
-
+      <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
+            <ExperiencedProfessional />
+      </Grid>
+      
       <Grid item xs={12} justifyContent="center" className={SECTION_MARGIN + " " + SECTION_TITLE + " " + BOTTOM_MARGIN}>
         <Typography  style={{alignItems: "center", fontWeight:600}} variant="h5" className={THEME_COLOR}>
           {

@@ -287,9 +287,14 @@ export const STATIC_CONTENT  = {
         },
     },
 
-    EXPERIENCE : {
+    EXPERIENCE: {
         TITLE: "Experience",
         BODY : "I've been working in the industry for about 3 years now. I've started my journey as a Web Developer and currently I'm working as a MERN Stack developer."
+    },
+
+    PROJECTS: {
+        TITLE: "Projects",
+        BODY : "My projects make use of a vast variety of latest technology tools. My best experience is to create MERN Stack based projects, and NextJS Projects. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
     },
 
     CONTACT: {
