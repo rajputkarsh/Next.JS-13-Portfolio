@@ -8,7 +8,7 @@ import { STATIC_CONTENT, THEME_COLOR_HEX } from "@constant";
 import { ThemeContext, ThemeContextType } from "@context/theme";
 import { getThemeFromContext } from "@helper/theme";
 import { THEME } from "@theme";
-import { SECTION_MARGIN, THEME_COLOR, BOTTOM_MARGIN, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER, BOLD } from "@styles/GlobalClassNames";
+import { SECTION_MARGIN, THEME_COLOR, BOTTOM_MARGIN, SECTION_TITLE, VERTICALLY_HORIZONTALLY_CENTER, BOLD, UNDERLINE_ANIMATION } from "@styles/GlobalClassNames";
 import { toast } from 'react-toastify';
 
 function Experince() {
@@ -18,7 +18,7 @@ function Experince() {
   return (
     <Grid container justifyContent={'center'} style={{color: THEME[currentTheme].TEXT}}>
       <Grid item xs={12} className={SECTION_TITLE + " " + BOTTOM_MARGIN}>
-          <Typography variant="h3" className={THEME_COLOR + " " + BOLD}>
+          <Typography variant="h3" className={THEME_COLOR + " " + BOLD + " " + UNDERLINE_ANIMATION}>
               {
                   STATIC_CONTENT.EXPERIENCE.TITLE
               }
@@ -53,7 +53,7 @@ function Experince() {
       <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
             <ExperiencedProfessional />
       </Grid>
-      
+
       <Grid item xs={12} justifyContent="center" className={SECTION_MARGIN + " " + SECTION_TITLE + " " + BOTTOM_MARGIN}>
         <Typography  style={{alignItems: "center", fontWeight:600}} variant="h5" className={THEME_COLOR}>
           {

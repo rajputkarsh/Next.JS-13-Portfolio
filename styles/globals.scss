@@ -20,11 +20,11 @@
     transition: all 0.25s linear;
   }
 
-  .sectionMargin{
+  .section-Margin{
     margin-top: 10vh !important;
   }
 
-  .bottomMargin{
+  .bottom-Margin{
     margin-bottom: 5vh !important;    
   }
 
@@ -41,7 +41,7 @@
     font-weight: 700 !important;
   }
 
-  .sectionTitle {
+  .section-title {
     text-align: center !important;
     font-weight: 700 !important;
   }
@@ -58,24 +58,24 @@
     padding-right: 12px;
   }
 
-  .centerText{
+  .center-text{
     text-align: center !important;
   }
 
-  .verticallyHorizontallyCenter {
+  .vertically-horizontally-center {
     display: flex;
     flex-direction: column !important;
     justify-content: center;
     align-items: center;
   }
 
-  .verticallyCenter {
+  .vertically-center {
     display: flex;
     flex-direction: column !important;
     align-items: center;
   }
   
-  .horizontallyCenter {
+  .horizontally-center {
     display: flex;
     flex-direction: column !important;
     justify-content: center;
@@ -110,7 +110,7 @@
       color: $themeColor !important;
   }
 
-  .coloredDivider{
+  .colored-divider{
     &::before{
       border-top: thin solid $themeColor !important;
     }
@@ -132,5 +132,30 @@
   .vertical-timeline::before {
     background: $themeColor !important;
   }  
+
+  .underline-animation {
+    display: inline-block;
+    position: relative;
+    color: $themeColor;
+  }
+  
+  .underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: $themeColor;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
 
 }
