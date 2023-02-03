@@ -3,10 +3,11 @@
 
 import SocialMedia from '@components/socialMedia/SocialMedia';
 import ArticlePublish from '@components/svg/articlePublish/ArticlePublish';
-import { STATIC_CONTENT, THEME_COLOR_HEX } from '@constant';
+import { BLOGS_URL, STATIC_CONTENT, THEME_COLOR_HEX } from '@constant';
 import { ThemeContextType } from '@context/theme';
 import { ThemeContext } from '@context/theme';
 import { getThemeFromContext } from '@helper/theme';
+import { redirectTo } from '@helper/url';
 import { Button, Grid, Typography } from '@mui/material';
 import { BOLD, BOTTOM_MARGIN, HORIZONTALLY_CENTER, SECTION_TITLE, THEME_COLOR, VERTICALLY_CENTER, VERTICALLY_HORIZONTALLY_CENTER, X_PADDING } from '@styles/GlobalClassNames';
 import { THEME } from '@theme';
@@ -57,6 +58,7 @@ function Contact() {
         <br/><br/>
 
         <Button 
+          onClick={() => {redirectTo(BLOGS_URL, true)}}
           variant="outlined" 
           color='error' 
           sx={

@@ -12,6 +12,8 @@ export const URL_PROTOCOL              = 'http://';
 export const BASE_URL                  = '/';
 export const BASE_URL_WITHOUT_PROTOCOL = '/';
 
+export const BLOGS_URL = 'https://blogs.utkarshrajput.com/';
+
 export const THEME_COLOR_HEX = '#E3405F';
 
 export const STATIC_CONTENT  = {
@@ -51,7 +53,7 @@ export const STATIC_CONTENT  = {
             name: 'Blogs',
             color: '#2f31b3',
             hoverColor: '#FFF',
-            redirect: `${URL_PROTOCOL}blogs.${BASE_URL_WITHOUT_PROTOCOL}`,
+            redirect: `${BLOGS_URL}`,
         },
         CONTACT: {
             id: 'navbar-contact',
@@ -295,6 +297,14 @@ export const STATIC_CONTENT  = {
     PROJECTS: {
         TITLE: "Projects",
         BODY : "My projects make use of a vast variety of latest technology tools. My best experience is to create MERN Stack based projects, and NextJS Projects. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
+        ITEMS: [{
+            title: "Dummy project",
+            body: "This is a dummy project",
+            image: 'https://thumbs.dreamstime.com/b/demo-text-businessman-dark-vintage-background-108609906.jpg',
+            imageAlt: 'test',
+            sourceUrl: '',
+            demoUrl: '',
+        }],
     },
 
     CONTACT: {
