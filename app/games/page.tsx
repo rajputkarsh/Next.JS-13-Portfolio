@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { Grid, Typography } from "@mui/material";
-import { STATIC_CONTENT, THEME_COLOR_HEX } from "@constant";
+import { STATIC_CONTENT } from "@constant";
 import { ThemeContext, ThemeContextType } from "@context/theme";
 import { getThemeFromContext } from "@helper/theme";
 import { THEME } from "@theme";
@@ -14,10 +14,10 @@ import {
   BOLD,
   UNDERLINE_ANIMATION,
 } from "@styles/GlobalClassNames";
-import OfficeWork from "@components/svg/officeWork/OfficeWork";
+import GamingBoy from "@components/svg/gamingBoy/GamingBoy";
 import Card from "@components/card/Card";
 
-function Projects() {
+function Games() {
   const { currentTheme }: ThemeContextType = getThemeFromContext(
     useContext(ThemeContext)
   );
@@ -33,26 +33,26 @@ function Projects() {
           variant="h3"
           className={THEME_COLOR + " " + BOLD + " " + UNDERLINE_ANIMATION}
         >
-          {STATIC_CONTENT.PROJECTS.TITLE}
+          {STATIC_CONTENT.GAMES.TITLE}
         </Typography>
       </Grid>
 
       <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
-        <OfficeWork />
+        <GamingBoy />
       </Grid>
 
       <Grid item xs={12} sm={6} className={VERTICALLY_HORIZONTALLY_CENTER}>
         <Grid container>
           <Grid item xs={12} justifyContent="center">
             <Typography variant="h6" sx={{ padding: "35px" }}>
-              {STATIC_CONTENT.PROJECTS.BODY}
+              {STATIC_CONTENT.GAMES.BODY}
             </Typography>
           </Grid>
         </Grid>
       </Grid>
 
       <Grid container alignItems="center" justifyContent="center">
-        {STATIC_CONTENT.PROJECTS.ITEMS.map((project, index) => (
+        {STATIC_CONTENT.GAMES.ITEMS.map((project, index) => (
           <Grid item xs={12} sm={6} md={3} key={`project_${index}`} sx={{margin:'4px'}}>
             <Card
               title={project.title}
@@ -69,4 +69,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Games;
