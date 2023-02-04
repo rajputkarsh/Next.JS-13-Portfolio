@@ -9,6 +9,7 @@ import { ThemeContext } from '../context/theme';
 import ThemeButton from '../components/CustomButtons/ThemeButton';
 import { THEME } from '../utils/theme';
 import { ToastContainer } from 'react-toastify';
+import { usePathname } from 'next/navigation';
 
 import 'react-toastify/dist/ReactToastify.css';
 import "../styles/globals.scss";
@@ -16,10 +17,24 @@ import "../styles/globals.scss";
 const RootLayout = ({ children } : { children: React.ReactNode }) => {
 
     const {theme: currentTheme, setTheme} = useTheme();
+    const muiTheme = responsiveFontSizes(createTheme());
 
-    const muiTheme = responsiveFontSizes(createTheme())
+    const route = usePathname();
 
-    return (
+    const loader = (
+        <html lang="en">
+            <ThemeProvider theme={muiTheme}>
+                <ThemeContext.Provider value={{currentTheme, setTheme}}>
+                    <body>
+                        <ToastContainer />
+                        { children }
+                    </body>
+                </ThemeContext.Provider>
+            </ThemeProvider>
+        </html>
+    );
+
+    const pages =  (
         <html lang="en">
             <ThemeProvider theme={muiTheme}>
                 <ThemeContext.Provider value={{currentTheme, setTheme}}>
@@ -39,6 +54,9 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
             </ThemeProvider>
         </html>
     );
+
+    return route !== "/" ? pages : loader
+
 }
 
 export default RootLayout;
