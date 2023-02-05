@@ -22,10 +22,10 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
     const route = usePathname();
 
     const loader = (
-        <html lang="en">
+        <html lang="en" style={{backgroundColor: THEME[currentTheme].BACKGROUND}}>
             <ThemeProvider theme={muiTheme}>
                 <ThemeContext.Provider value={{currentTheme, setTheme}}>
-                    <body>
+                    <body style={{backgroundColor: THEME[currentTheme].BACKGROUND}}>
                         <ToastContainer />
                         { children }
                     </body>
@@ -35,10 +35,10 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
     );
 
     const pages =  (
-        <html lang="en">
+        <html lang="en" style={{backgroundColor: THEME[currentTheme].BACKGROUND}}>
             <ThemeProvider theme={muiTheme}>
                 <ThemeContext.Provider value={{currentTheme, setTheme}}>
-                    <body>
+                    <body style={{backgroundColor: THEME[currentTheme].BACKGROUND}}>
                         <ToastContainer />
                         <header>
                             <Navbar />                    
