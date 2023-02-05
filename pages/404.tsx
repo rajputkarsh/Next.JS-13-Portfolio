@@ -39,7 +39,7 @@ function NotFoundPage() {
             </Grid>
           </Grid>
 
-          <ThemeButton isFloating={true} />
+          {/* <ThemeButton isFloating={true} /> */}
           <Footer />
 
       </ThemeContext.Provider>

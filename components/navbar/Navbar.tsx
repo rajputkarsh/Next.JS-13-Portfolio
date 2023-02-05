@@ -70,7 +70,7 @@ const Navbar = () => {
         <Toolbar>
           <Typography
             variant="h4"
-            onClick={() => {redirectTo(BASE_URL)}}
+            onClick={() => {redirectTo(`${BASE_URL}home`)}}
             component="div"
             className={THEME_COLOR}
             sx={
@@ -131,7 +131,7 @@ const Navbar = () => {
                 )
               )
             }
-          <ThemeButton isFloating={false} />
+          {/* <ThemeButton isFloating={false} /> */}
           </Box>
         </Toolbar>
       </AppBar>
