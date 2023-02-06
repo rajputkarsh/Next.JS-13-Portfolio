@@ -27,10 +27,10 @@ const useTheme = () => {
 
     // const [theme, setTheme] = useState<Theme>(localTheme as Theme);
 
-    // useEffect(() => {
-    //     const currentTheme = localStorage.getItem("theme") ?? SETTINGS.AVAILABLE_THEMES.DARK as string;
-    //     setTheme(currentTheme as Theme);
-    // }, []);
+    useEffect(() => {
+        const currentTheme = localStorage.getItem("theme") ?? SETTINGS.AVAILABLE_THEMES.DARK as string;
+        setTheme(currentTheme as Theme);
+    }, []);
 
     // useEffect(() => {
     //     localStorage.setItem('theme', theme);
