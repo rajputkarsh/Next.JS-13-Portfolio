@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { Grid, Typography } from "@mui/material";
-import { STATIC_CONTENT } from "@constant";
+import { STATIC_CONTENT, THEME_COLOR_HEX } from "@constant";
 import { ThemeContext, ThemeContextType } from "@context/theme";
 import { getThemeFromContext } from "@helper/theme";
 import { THEME } from "@theme";
@@ -16,8 +16,18 @@ import {
 } from "@styles/GlobalClassNames";
 import GamingBoy from "@components/svg/gamingBoy/GamingBoy";
 import Card from "@components/card/Card";
+import axios from "axios";
+import { useQuery } from "react-query";
+import { ThreeDots } from "react-loader-spinner";
+
+const fetchGames = () => {
+  return axios.get("/api/games");
+};
 
 function Games() {
+
+  const { data: games, isLoading } = useQuery("games", fetchGames);
+
   const { currentTheme }: ThemeContextType = getThemeFromContext(
     useContext(ThemeContext)
   );
@@ -52,18 +62,40 @@ function Games() {
       </Grid>
 
       <Grid container alignItems="center" justifyContent="center">
-        {STATIC_CONTENT.GAMES.ITEMS.map((project, index) => (
-          <Grid item xs={12} sm={6} md={3} key={`project_${index}`} sx={{margin:'4px'}}>
-            <Card
-              title={project.title}
-              body={project.body}
-              image={project.image}
-              imageAlt={project.imageAlt}
-              sourceUrl={project.sourceUrl}
-              demoUrl={project.demoUrl}
-            />
-          </Grid>
-        ))}
+      {isLoading ? (
+          <ThreeDots
+            height="80"
+            width="80"
+            radius="9"
+            color={THEME_COLOR_HEX}
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        ) : (
+          games?.data?.data?.map(
+            (game: { [key: string]: any }, index: number) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={3}
+                key={`game${index}`}
+                sx={{ margin: "4px" }}
+              >
+                <Card
+                  title={game?.title}
+                  body={game?.body}
+                  image={game?.image}
+                  imageAlt={game?.imageAlt}
+                  sourceUrl={game?.sourceUrl}
+                  demoUrl={game?.demoUrl}
+                />
+              </Grid>
+            )
+          )
+        )}
       </Grid>
     </Grid>
   );
