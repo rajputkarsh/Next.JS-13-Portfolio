@@ -27,6 +27,10 @@ function Card(cardContent: CardContent) {
     useContext(ThemeContext)
   );
 
+  const handleClick = () => {
+    window.open(cardContent?.demoUrl || cardContent?.sourceUrl, '_blank');
+  }
+
   return (
     <MuiCard
       variant="outlined"
@@ -35,7 +39,7 @@ function Card(cardContent: CardContent) {
         backgroundColor: THEME[currentTheme].BACKGROUND,
       }}
     >
-      <CardActionArea>
+      <CardActionArea onClick={handleClick}>
         <CardHeader title={cardContent.title} className={THEME_COLOR} />
         <CardMedia
           component="img"

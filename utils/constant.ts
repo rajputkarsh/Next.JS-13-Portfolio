@@ -297,14 +297,6 @@ export const STATIC_CONTENT  = {
     PROJECTS: {
         TITLE: "Projects",
         BODY : "My projects make use of a vast variety of latest technology tools. My best experience is to create MERN Stack based projects, and NextJS Projects. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
-        ITEMS: [{
-            title: "Dummy project",
-            body: "This is a dummy project",
-            image: 'https://thumbs.dreamstime.com/b/demo-text-businessman-dark-vintage-background-108609906.jpg',
-            imageAlt: 'test',
-            sourceUrl: '',
-            demoUrl: '',
-        }],
     },
 
     CONTACT: {

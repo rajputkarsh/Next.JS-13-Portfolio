@@ -16,8 +16,17 @@ import {
 } from "@styles/GlobalClassNames";
 import OfficeWork from "@components/svg/officeWork/OfficeWork";
 import Card from "@components/card/Card";
+import axios from "axios";
+import { useQuery } from "react-query";
+import { ThreeDots } from "react-loader-spinner";
+
+const fetchProjects = () => {
+  return axios.get("/api/projects");
+};
 
 function Projects() {
+  const { data: projects, isLoading } = useQuery("projects", fetchProjects);
+
   const { currentTheme }: ThemeContextType = getThemeFromContext(
     useContext(ThemeContext)
   );
@@ -52,18 +61,40 @@ function Projects() {
       </Grid>
 
       <Grid container alignItems="center" justifyContent="center">
-        {STATIC_CONTENT.PROJECTS.ITEMS.map((project, index) => (
-          <Grid item xs={12} sm={6} md={3} key={`project_${index}`} sx={{margin:'4px'}}>
-            <Card
-              title={project.title}
-              body={project.body}
-              image={project.image}
-              imageAlt={project.imageAlt}
-              sourceUrl={project.sourceUrl}
-              demoUrl={project.demoUrl}
-            />
-          </Grid>
-        ))}
+        {isLoading ? (
+          <ThreeDots
+            height="80"
+            width="80"
+            radius="9"
+            color={THEME_COLOR_HEX}
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          />
+        ) : (
+          projects?.data?.data?.map(
+            (project: { [key: string]: any }, index: number) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={3}
+                key={`project_${index}`}
+                sx={{ margin: "4px" }}
+              >
+                <Card
+                  title={project?.title}
+                  body={project?.body}
+                  image={project?.image}
+                  imageAlt={project?.imageAlt}
+                  sourceUrl={project?.sourceUrl}
+                  demoUrl={project?.demoUrl}
+                />
+              </Grid>
+            )
+          )
+        )}
       </Grid>
     </Grid>
   );
