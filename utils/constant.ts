@@ -308,14 +308,6 @@ export const STATIC_CONTENT  = {
     GAMES: {
         TITLE: "Games",
         BODY : "Reached Here? Lets play rome refreshing games to reset our minds. Below given are some mind blowing games that you can try.",
-        ITEMS: [{
-            title: "Dummy project",
-            body: "This is a dummy project",
-            image: 'https://thumbs.dreamstime.com/b/demo-text-businessman-dark-vintage-background-108609906.jpg',
-            imageAlt: 'test',
-            sourceUrl: '',
-            demoUrl: '',
-        }],
     },
 
     SOCIAL_MEDIA : {
