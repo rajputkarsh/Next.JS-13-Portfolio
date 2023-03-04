@@ -11,4 +11,5 @@ export const FIREBASE_CONFIG = {
 
 export const COLLECTIONS = {
   PROJECTS: 'projects',
+  GAMES   : 'games',
 };

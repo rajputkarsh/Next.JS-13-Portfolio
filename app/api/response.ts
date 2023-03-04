@@ -5,4 +5,9 @@ export const RESPONSES = {
    message: 'Projects list fetched successfully',
    data: data, 
   }),
+  GAMES_LIST : (data: Object) => ({
+   type: 'GAMES_LIST',
+   message: 'Games list fetched successfully',
+   data: data, 
+  }),
 }
