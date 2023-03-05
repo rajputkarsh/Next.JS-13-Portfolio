@@ -35,7 +35,7 @@ const drawerWidth = 240;
 const navItems = (color: string) => {
   return Object.values(STATIC_CONTENT.NAVBAR_ITEMS).map(
     (item) => (
-      <ListItem key={item.id} disablePadding>
+      <ListItem key={item.id} disablePadding onClick={() => {redirectTo(item.redirect)}}>
         <ListItemButton sx={{ textAlign: 'center', color: color}}>
           <ListItemText primary={item.name} />
         </ListItemButton>

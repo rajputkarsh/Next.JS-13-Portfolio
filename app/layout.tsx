@@ -48,7 +48,7 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
                         <header>
                             <Navbar />                    
                         </header>
-                        <div style={{paddingTop: '45px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 180px)'}}>
+                        <div style={{paddingTop: '25px', backgroundColor: THEME[currentTheme].BACKGROUND, minHeight:'calc(100vh - 180px)'}}>
                             <QueryClientProvider client={queryClient}>
                             { children }
                             </QueryClientProvider>
