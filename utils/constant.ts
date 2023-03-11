@@ -296,7 +296,10 @@ export const STATIC_CONTENT  = {
 
     PROJECTS: {
         TITLE: "Projects",
-        BODY : "My projects make use of a vast variety of latest technology tools. My best experience is to create MERN Stack based projects, and NextJS Projects. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
+        BODY: "My projects make use of a vast variety of latest technology tools. My best experience is to create MERN Stack based projects, and NextJS Projects. Below are some of my projects. Note that not all of the mentioned projects are on GitHub yet.",
+        LATEST_PROJECT_TITLE: "Latest Project",
+        OTHER_PROJECTS: "Other Projects",
+        COMING_SOON_PROJECTS: "Coming Soon",
     },
 
     CONTACT: {

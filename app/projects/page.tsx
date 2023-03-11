@@ -15,10 +15,10 @@ import {
   UNDERLINE_ANIMATION,
 } from "@styles/GlobalClassNames";
 import OfficeWork from "@components/svg/officeWork/OfficeWork";
-import Card from "@components/card/Card";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { ThreeDots } from "react-loader-spinner";
+import ProjectsSection from "@components/projectsSection/ProjectsSection";
 
 const fetchProjects = () => {
   return axios.get("/api/projects");
@@ -73,27 +73,7 @@ function Projects() {
             visible={true}
           />
         ) : (
-          projects?.data?.data?.map(
-            (project: { [key: string]: any }, index: number) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={3}
-                key={`project_${index}`}
-                sx={{ margin: "4px" }}
-              >
-                <Card
-                  title={project?.title}
-                  body={project?.body}
-                  image={project?.image}
-                  imageAlt={project?.imageAlt}
-                  sourceUrl={project?.sourceUrl}
-                  demoUrl={project?.demoUrl}
-                />
-              </Grid>
-            )
-          )
+            <ProjectsSection projects={projects?.data?.data} />
         )}
       </Grid>
     </Grid>
