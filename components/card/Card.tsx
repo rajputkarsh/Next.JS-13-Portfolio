@@ -13,6 +13,8 @@ import { THEME_COLOR } from "@styles/GlobalClassNames";
 import { THEME } from "@theme";
 import { useContext } from "react";
 
+import * as css from './card.module.scss';
+
 type CardContent = {
   title: string;
   body: string;
@@ -36,6 +38,7 @@ function Card(cardContent: CardContent) {
       variant="outlined"
       sx={{
         color: THEME[currentTheme].TEXT,
+        height: '350px',
         backgroundColor: THEME[currentTheme].BACKGROUND,
       }}
     >
@@ -43,7 +46,8 @@ function Card(cardContent: CardContent) {
         <CardHeader title={cardContent.title} className={THEME_COLOR} />
         <CardMedia
           component="img"
-          height="140"
+          height="100%"
+          className={css.MuiMediaImg}
           image={cardContent.image}
           alt={cardContent.imageAlt}        
         />

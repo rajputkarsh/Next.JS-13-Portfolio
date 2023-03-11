@@ -1,6 +1,6 @@
 
 import { FirebaseApp, initializeApp } from "firebase/app";
-import { Firestore, getFirestore, collection, getDocs, QueryDocumentSnapshot, DocumentData } from "firebase/firestore";
+import { Firestore, getFirestore, collection, query, getDocs, QueryDocumentSnapshot, DocumentData, orderBy } from "firebase/firestore";
 import { FIREBASE_CONFIG } from "./config";
 
 export class FirebaseBase {
@@ -14,7 +14,7 @@ export class FirebaseBase {
 
   async getDocuments(name: string): Promise<Array<any>>{
     try{
-      const documents = await getDocs(collection(this.#db, name));
+      const documents = await getDocs(query(collection(this.#db, name), orderBy('index', 'desc')));
       const documentArray: Array<any> = [];
       documents.forEach((doc: QueryDocumentSnapshot<DocumentData>) => {
         documentArray.push(
