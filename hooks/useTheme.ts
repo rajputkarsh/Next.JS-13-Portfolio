@@ -5,13 +5,15 @@ import { SETTINGS } from '../utils/constant';
 
 const useTheme = () => {
     
-    let localTheme: Theme = SETTINGS.AVAILABLE_THEMES.LIGHT;
+    const DEFAULT_THEME: Theme = SETTINGS.AVAILABLE_THEMES.LIGHT;
+
+    let localTheme: Theme = DEFAULT_THEME;
 
     // if(window.location.search.includes('meta-hex=90786')){
     //     localTheme = SETTINGS.AVAILABLE_THEMES.LIGHT;
     // }
 
-    const [theme, setTheme] = useState<Theme>(localTheme ? localTheme : SETTINGS.AVAILABLE_THEMES.LIGHT);
+    const [theme, setTheme] = useState<Theme>(localTheme ? localTheme : DEFAULT_THEME);
 
     useEffect(() => {
         const currentTime: Time = new Date().getHours();
@@ -28,7 +30,7 @@ const useTheme = () => {
     // const [theme, setTheme] = useState<Theme>(localTheme as Theme);
 
     useEffect(() => {
-        const currentTheme = localStorage.getItem("theme") ?? SETTINGS.AVAILABLE_THEMES.LIGHT as string;
+        const currentTheme = localStorage.getItem("theme") ?? DEFAULT_THEME as string;
         setTheme(currentTheme as Theme);
     }, []);
 
