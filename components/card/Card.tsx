@@ -13,7 +13,7 @@ import { THEME_COLOR } from "@styles/GlobalClassNames";
 import { THEME } from "@theme";
 import { useContext } from "react";
 
-import * as css from './card.module.scss';
+import style from './card.module.scss';
 
 type CardContent = {
   title: string;
@@ -47,7 +47,7 @@ function Card(cardContent: CardContent) {
         <CardMedia
           component="img"
           height="100%"
-          className={css.MuiMediaImg}
+          className={style.MuiMediaImg}
           image={cardContent.image}
           alt={cardContent.imageAlt}        
         />
