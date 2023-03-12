@@ -4,8 +4,14 @@ import { Icon } from '@iconify/react';
 import { redirectTo } from '@helper/url';
 import { Grid, Typography } from '@mui/material'
 import { BOLD, BOTTOM_MARGIN, CENTER_TEXT, SECTION_MARGIN, SECTION_TITLE, THEME_COLOR, UNDERLINE_ANIMATION, VERTICALLY_HORIZONTALLY_CENTER, X_PADDING } from '@styles/GlobalClassNames';
+import { THEME } from '@theme';
+import { ThemeContext, ThemeContextType } from '@context/theme';
+import { getThemeFromContext } from '@helper/theme';
+import { useContext } from 'react';
 
 function ProjectsSection({ projects }: { projects: Array<{ [key: string]: any }> } ) {
+
+  const {currentTheme} : ThemeContextType = getThemeFromContext(useContext(ThemeContext));
 
   if (!Array.isArray(projects) || projects.length < 1) return null;
 
@@ -68,7 +74,7 @@ function ProjectsSection({ projects }: { projects: Array<{ [key: string]: any }>
           {completedProjects[0]?.title}
           <sup>          <Icon icon='bi:box-arrow-up-right' style={{ fontSize: 15, cursor: 'pointer' }} onClick={() => { redirectTo(completedProjects[0]?.demoUrl, true) }} /></sup>
         </Typography>
-        <Typography variant='body1' className={CENTER_TEXT} sx={{marginTop: '10px'}}>
+        <Typography variant='body1' className={CENTER_TEXT} sx={{marginTop: '10px', color: THEME[currentTheme].TEXT}}>
           {completedProjects[0]?.body}
         </Typography>
 
