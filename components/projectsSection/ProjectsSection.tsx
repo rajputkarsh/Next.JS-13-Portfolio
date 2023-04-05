@@ -8,6 +8,7 @@ import { THEME } from '@theme';
 import { ThemeContext, ThemeContextType } from '@context/theme';
 import { getThemeFromContext } from '@helper/theme';
 import { useContext } from 'react';
+import Image from 'next/image';
 
 function ProjectsSection({ projects }: { projects: Array<{ [key: string]: any }> } ) {
 
@@ -80,7 +81,7 @@ function ProjectsSection({ projects }: { projects: Array<{ [key: string]: any }>
 
       </Grid>
       <Grid item xs={12} sm={8} className={VERTICALLY_HORIZONTALLY_CENTER}>
-        <img src={completedProjects[0]?.image}></img>
+        <Image src={completedProjects[0]?.image} alt={completedProjects[0]?.imageAlt} />
       </Grid>
     </Grid>
   );
