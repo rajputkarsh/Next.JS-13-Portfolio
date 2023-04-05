@@ -33,6 +33,7 @@ export const STATIC_CONTENT  = {
             color: '#eb6559',
             hoverColor: '#FFF',
             redirect: 'education/',
+            redirectNewTab: false,
         },
         EXPERIENCE: {
             id: 'navbar-experience',
@@ -40,6 +41,7 @@ export const STATIC_CONTENT  = {
             color: '#f7b908',
             hoverColor: '#FFF',
             redirect: 'experience/',
+            redirectNewTab: false,
         },
         PROJECTS: {
             id: 'navbar-projects',
@@ -47,6 +49,7 @@ export const STATIC_CONTENT  = {
             color: '#e44160',
             hoverColor: '#FFF',
             redirect: 'projects/',
+            redirectNewTab: false,
         },
         BLOGS: {
             id: 'navbar-blogs',
@@ -54,6 +57,7 @@ export const STATIC_CONTENT  = {
             color: '#2f31b3',
             hoverColor: '#FFF',
             redirect: `${BLOGS_URL}`,
+            redirectNewTab: true,
         },
         CONTACT: {
             id: 'navbar-contact',
@@ -61,6 +65,7 @@ export const STATIC_CONTENT  = {
             color: '#47a148',
             hoverColor: '#FFF',
             redirect: 'contact/',
+            redirectNewTab: false,
         },
         GAMES: {
             id: 'navbar-games',
@@ -68,6 +73,7 @@ export const STATIC_CONTENT  = {
             color: '#3d4e5c',
             hoverColor: '#FFF',
             redirect: 'games/',
+            redirectNewTab: false,
         },
     },
 

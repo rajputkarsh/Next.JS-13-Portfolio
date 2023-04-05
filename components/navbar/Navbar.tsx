@@ -101,7 +101,7 @@ const Navbar = () => {
             {
               Object.values(STATIC_CONTENT.NAVBAR_ITEMS).map(
                 (item) => (
-                    <Button key={item.id} className='navbar-buttons' onClick={() => {redirectTo(item.redirect)}} sx={
+                    <Button key={item.id} className='navbar-buttons' onClick={() => {redirectTo(item.redirect, item.redirectNewTab)}} sx={
                         { 
                           color: THEME[currentTheme].TEXT,
                           marginLeft: {
