@@ -81,7 +81,7 @@ function ProjectsSection({ projects }: { projects: Array<{ [key: string]: any }>
 
       </Grid>
       <Grid item xs={12} sm={8} className={VERTICALLY_HORIZONTALLY_CENTER}>
-        <Image src={completedProjects[0]?.image} alt={completedProjects[0]?.imageAlt} />
+        <img src={completedProjects[0]?.image} alt={completedProjects[0]?.imageAlt} />
       </Grid>
     </Grid>
   );
