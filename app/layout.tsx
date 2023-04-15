@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
 import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material';
@@ -14,6 +14,7 @@ import { usePathname } from 'next/navigation';
 import 'react-toastify/dist/ReactToastify.css';
 import "../styles/globals.scss";
 import { QueryClient, QueryClientProvider } from 'react-query';
+import registerServiceWorker from '../serviceWorkers/workbox';
 
 const RootLayout = ({ children } : { children: React.ReactNode }) => {
 
@@ -23,6 +24,10 @@ const RootLayout = ({ children } : { children: React.ReactNode }) => {
     const queryClient = new QueryClient();
 
     const route = usePathname();
+
+    useEffect(() => {
+        registerServiceWorker();
+    });
 
     const loader = (
         <html lang="en" style={{backgroundColor: THEME[currentTheme].BACKGROUND}}>
