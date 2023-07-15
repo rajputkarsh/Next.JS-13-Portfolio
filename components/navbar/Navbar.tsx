@@ -82,6 +82,7 @@ const Navbar = () => {
                   md: '1.825rem',
                   lg: '2.325rem',
                 },
+                fontWeight: 700,
                 cursor: 'pointer'
               }
             }
@@ -123,7 +124,8 @@ const Navbar = () => {
                             xs: '0.675rem',
                             sm: '0.875rem',
                             md: '1.075rem', 
-                          }
+                          },
+                          fontWeight: 600,
                         }
                       }>
                       {item.name}
