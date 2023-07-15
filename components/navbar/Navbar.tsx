@@ -76,7 +76,7 @@ const Navbar = () => {
             sx={
               { 
                 flexGrow: 1,
-                fontFamily: 'Rock Salt', 
+                fontFamily: 'Open Sans', 
                 fontSize: {
                   sm: '1.325rem',
                   md: '1.825rem',
