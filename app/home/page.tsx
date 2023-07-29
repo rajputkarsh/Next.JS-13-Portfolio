@@ -10,6 +10,7 @@ import { THEME } from "@theme";
 import Introduction from "@components/introduction/Introduction";
 import AboutMe from "@components/aboutMe/AboutMe";
 import SkillSection from "@components/skillSection/SkillSection";
+import GithubStats from "@components/GithubStats/GithubStats";
 
 export default function Page() {
 
@@ -20,6 +21,7 @@ export default function Page() {
             <Introduction />
             <AboutMe />
             <SkillSection />
+            <GithubStats />
         </Grid>
 
     )

@@ -1,12 +1,15 @@
+import { ThemeInput as ReactCalendarThemeInput } from 'react-activity-calendar';
 import { Theme } from "@type/common";
 import BCM_LOGO from '@public/bcm.gif';
 import DAVIET_LOGO from '@public/daviet.jpg';
 import SCALER_LOGO from '@public/scaler.png';
 import PROFILE_PIC from '@public/profile-pic.webp';
 
-// export const URL_PROTOCOL              = 'https://';
-// export const BASE_URL                  = 'https://utkarshrajput.com/';
-// export const BASE_URL_WITHOUT_PROTOCOL = 'utkarshrajput.com/';
+export const GITHUB_API_BASE_URL = ' https://github-contributions-api.jogruber.de/v4/rajputkarsh';
+export const GITHUB_MAP_DEFAULT_THEME: ReactCalendarThemeInput = {
+    light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+    dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+};
 
 export const URL_PROTOCOL              = 'http://';
 export const BASE_URL                  = '/';

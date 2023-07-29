@@ -7,6 +7,4 @@ export const getThemeFromContext = (themeContext: ThemeContextType) => {
   const setTheme = themeContext.setTheme;
 
   return {currentTheme, setTheme};
-
-
 }

@@ -27,6 +27,7 @@
     "next-themes": "0.2.1",
     "next-with-workbox": "^3.0.5",
     "react": "18.2.0",
+    "react-activity-calendar": "2.0.2",
     "react-dom": "18.2.0",
     "react-loader-spinner": "5.3.4",
     "react-query": "3.39.3",
