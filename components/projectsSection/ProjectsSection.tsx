@@ -2,7 +2,7 @@ import Card from '@components/card/Card'
 import { STATIC_CONTENT } from '@constant';
 import { Icon } from '@iconify/react';
 import { redirectTo } from '@helper/url';
-import { Grid, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material';
 import { BOLD, BOTTOM_MARGIN, CENTER_TEXT, SECTION_MARGIN, SECTION_TITLE, THEME_COLOR, UNDERLINE_ANIMATION, VERTICALLY_HORIZONTALLY_CENTER, X_PADDING } from '@styles/GlobalClassNames';
 import { THEME } from '@theme';
 import { ThemeContext, ThemeContextType } from '@context/theme';

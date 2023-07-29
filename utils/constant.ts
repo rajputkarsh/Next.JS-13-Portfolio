@@ -238,6 +238,9 @@ export const STATIC_CONTENT  = {
                 ]
             },
         },
+        GITHUB_STATS: {
+            TITLE: "Github Stats",
+        }
     },
 
     EDUCATION: {
