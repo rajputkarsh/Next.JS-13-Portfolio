@@ -16,7 +16,7 @@ function ProjectsSection({ projects }: { projects: Array<{ [key: string]: any }>
 
   if (!Array.isArray(projects) || projects.length < 1) return null;
 
-  const completedProjects: Array<{ [key: string]: any }> = projects.filter((project) => project?.status == 'completed');
+  const completedProjects: Array<{ [key: string]: any }> = projects.filter((project) => project?.status == 'completed').sort((p1, p2) => (p2?.index || 1 - p1?.index || 1));
   const ongoingProjects: Array<{ [key: string]: any }> = projects.filter((project) => project?.status != 'completed');
 
   const projectsList = (projectsArray: Array<{ [key: string]: any }>, title: string) => {
